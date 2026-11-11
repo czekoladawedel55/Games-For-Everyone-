@@ -1,31 +1,35 @@
 # 🧱 BTBlocks — Games for Everyone
 
-## 🌐 BTBlocks download center
+## 🪟 [BTBlocks — strona Windows 7 Aero](https://czekoladawedel55.github.io/Games-For-Everyone-/)
 
-**[Open the Windows 7 Aero BTBlocks website](https://czekoladawedel55.github.io/Games-For-Everyone-/)**
+## 🎄 Następne wydanie: BTBlocks v1.4 Christmas Edition — Kafelkowy Labirynt
 
-## 🎄 BTBlocks v1.5 Christmas Edition — Tile Maze + Inspiron Tribute
+**To będzie kolejny publiczny instalator EXE. Obecnie oczekuje na kompilację i testy.**
 
-A new edition is being prepared with **Kafelkowy Labirynt**, a top-down infinite stone-grout maze inspired by a real photograph. It includes treasure chests, loot inventory, trader, upgrades, trap disarming and 5-minute flashlight blackouts. **New in v1.5:** an Inspiron 620 farewell scene and a side quest to recover three data fragments in the maze and restore the computer's memory at the trader.
+- Wszystkie minigry z Christmas Edition, w tym Gift Catcher.
+- **Kafelkowy Labirynt**: proceduralny labirynt 2D z widokiem z góry, inspirowany szczelinami między kafelkami.
+- Ekwipunek i loot ze skrzyń, teleport do handlarza, sprzedaż znalezisk.
+- Ulepszenia broni, rozbrajacza i wykrywacza pułapek.
+- Pięciominutowe blackouty i żółta latarka.
 
-**Status: installer EXE pending.** Source and development files are kept **private**. The previously published v1.4 Christmas Original EXE has been moved to the public old versions archive. The v1.4 Tile Maze developer preview has been archived privately because it was never released as an installer.
+**[Prywatny kod i paczka developerska](https://drive.google.com/drive/folders/1Dfd0wW9cv_9mmNvNRWcqG4FUp7DjQRi6)** — dostęp wyłącznie dla właściciela. Kod gry nie jest publikowany w tym repozytorium.
 
-### 📁 Download older Windows versions
+## 🖥️ Kolejne wydanie: BTBlocks v1.5 Christmas Edition — Inspiron 620 Tribute
 
-- **[BTBlocks v1.4 Christmas Original — EXE](https://drive.google.com/file/d/1dfKcGXOCyDXvSMeBSUTDf5Ev3UmZKw1Y/view?usp=drivesdk)** — previous Christmas Edition, without Tile Maze.
-- **[BTBlocks v1.3 — EXE](https://drive.google.com/file/d/1UYH18dH5nfyBhhsiaHZjmY4161xGmSVP/view?usp=drivesdk)** — earlier release.
-- **[Google Drive old versions archive](https://drive.google.com/drive/folders/1oTz7OIb2q6pUFwwtqRCIo9Wvi-bj0iZr)**.
+**Dopiero po v1.4.** Obejmie świąteczne gry, Kafelkowy Labirynt i pożegnalną misję z fragmentami pamięci Inspirona 620. Kod v1.5 jest przygotowany prywatnie; EXE nie został jeszcze opublikowany.
 
-When the v1.5 executable is built, tested, and uploaded, it will replace the main download button. Old EXEs remain in the Explorer-style archive.
+## 📁 Starsze wersje — pobierz EXE
 
-## 💻 System support
+- [v1.4 Christmas Original (bez labiryntu)](https://drive.google.com/file/d/1dfKcGXOCyDXvSMeBSUTDf5Ev3UmZKw1Y/view?usp=drivesdk)
+- [v1.3](https://drive.google.com/file/d/1UYH18dH5nfyBhhsiaHZjmY4161xGmSVP/view?usp=drivesdk)
+- [Folder archiwum Google Drive](https://drive.google.com/drive/folders/1oTz7OIb2q6pUFwwtqRCIo9Wvi-bj0iZr)
 
-Windows 7–11 (64-bit) is the intended target for the Electron 22 packaging workflow. Windows XP/Vista need a different legacy runtime and are not supported by the current installer.
+## 💻 Zgodność
 
-## 🛠️ Feedback
+Instalatory Electron 22 są przeznaczone dla Windows 7–11 (64-bit). Windows XP/Vista nie są obsługiwane przez ten instalator.
 
-- [Report a bug / suggest a feature](../../issues)
-- [Changelog](CHANGELOG.md)
-- [Old versions](archive/README.md)
+## 🛠️ Kontakt i zmiany
 
-The game source is **not included in this public repository**. The public website code is separate from the private game source.
+[Zgłoś błąd](../../issues) · [Changelog](CHANGELOG.md) · [Archiwum](archive/README.md)
+
+Kod strony WWW jest publiczny, kod gry pozostaje prywatny.
