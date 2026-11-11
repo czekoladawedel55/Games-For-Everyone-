@@ -1,5 +1,21 @@
 # BTBlocks changelog
 
+## v1.5 — Christmas Edition + Inspiron 620 Tribute (in development)
+
+- Keeps v1.4 Christmas Edition games and the Tile Maze expansion.
+- A nostalgic Windows 7-styled farewell scene for the Dell Inspiron 620.
+- In Tile Maze, collect three hidden data fragments to complete the computer's memory at the trader.
+- Quest completion rewards 620 commemorative coins and a saved badge.
+- Private source and build kit prepared; **Windows EXE not compiled or released yet**.
+
+## v1.4 — Christmas Tile Maze developer preview (private archive)
+
+- Existing Christmas mini-games plus procedural Tile Maze.
+- Never released as a public Windows EXE.
+- Source and previous build kit are retained in the project's private development archive.
+
+# BTBlocks changelog
+
 ## v1.4 — Christmas Edition + Tile Maze Expansion (in development)
 
 - New Kafelkowy Labirynt: infinite procedural 2D maze based on a photographed stone-wall texture.
