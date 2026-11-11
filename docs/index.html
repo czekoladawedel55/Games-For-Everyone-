@@ -83,12 +83,12 @@ body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:
         <div class="eyebrow">Welcome to BTBlocks</div>
         <h1>Play. Build.<br><span>Have fun.</span></h1>
         <p class="desc">A growing collection of mini-games with nostalgic themes, made for everyone. Download the newest Windows version and open the Aero Explorer to browse previous releases. GitHub Releases update automatically.</p>
-        <div class="tags"><span class="tag">🎮 Mini-games</span><span class="tag">🪟 Aero vibes</span><span class="tag">🌐 Multiplayer experiments</span><span class="tag" id="version-tag">v1.4 • Tile Maze w przygotowaniu</span></div>
+        <div class="tags"><span class="tag">🎮 Mini-games</span><span class="tag">🪟 Aero vibes</span><span class="tag">🌐 Multiplayer experiments</span><span class="tag" id="version-tag">v1.5 • Inspiron Tribute w przygotowaniu</span></div>
         <div class="actions">
-          <a class="primary" id="download" aria-disabled="true">⏳ Nowe v1.4 Tile Maze — w przygotowaniu</a>
+          <a class="primary" id="download" aria-disabled="true">⏳ BTBlocks v1.5 Christmas — w przygotowaniu</a>
           <button class="secondary" type="button" id="archive-btn">📁 Previous versions</button>
         </div>
-        <div class="status" id="download-status" role="status" aria-live="polite">Poprzednie wersje pobierzesz w Eksploratorze wersji. Nowe EXE jest jeszcze w przygotowaniu.</div>
+        <div class="status" id="download-status" role="status" aria-live="polite">Poprzednie EXE są w archiwum. Nowa v1.5 z misją Inspirona czeka na kompilację i testy.</div>
       </div>
       <div class="hero-art" role="img" aria-label="BTBlocks colorful 3D-style blocks"><div class="sun"></div><div class="blocks"><div class="block">B</div><div class="block">T</div><div class="block">★</div></div></div>
     </div>
@@ -154,13 +154,13 @@ function updateClock(){var d=new Date();setText('clock',d.toLocaleTimeString([],
 updateClock();setInterval(updateClock,30000);
 function showNoCurrentRelease(msg){
  var button=document.getElementById('download');
- button.removeAttribute('href');button.removeAttribute('target');button.textContent='⏳ Nowe v1.4 Tile Maze — w przygotowaniu';
+ button.removeAttribute('href');button.removeAttribute('target');button.textContent='⏳ BTBlocks v1.5 Christmas — w przygotowaniu';
  button.setAttribute('aria-disabled','true');
- setText('version-tag','v1.4 • Tile Maze w przygotowaniu');
+ setText('version-tag','v1.5 • Inspiron Tribute w przygotowaniu');
  setText('download-status',msg);
 }
 function loadReleases(){
- showNoCurrentRelease('Nowa edycja z Kafelkowym Labiryntem jest przygotowana, ale instalator EXE nie został jeszcze zbudowany. Poprzednie wydania pobierzesz w archiwum.');
+ showNoCurrentRelease('Nowa edycja v1.5 z Kafelkowym Labiryntem i misją Inspirona 620 jest przygotowana, ale instalator EXE nie został jeszcze zbudowany. Poprzednie wydania pobierzesz w archiwum.');
  older=archivedDrive.slice();
  if(!overlay.hidden)renderArchive();
  fetch(api,{headers:{Accept:'application/vnd.github+json'}}).then(function(response){if(!response.ok)throw Error('GitHub API status '+response.status);return response.json();}).then(function(data){
@@ -175,7 +175,7 @@ function loadReleases(){
    if(!overlay.hidden)renderArchive();
  }).catch(function(err){
     older=archivedDrive.slice();
-    showNoCurrentRelease('Nowa wersja jest przygotowana, ale nie ma jeszcze EXE. Poprzednie wydania znajdziesz w archiwum. GitHub Releases: '+err.message);
+    showNoCurrentRelease('Nowa v1.5 jest przygotowana, ale nie ma jeszcze EXE. Poprzednie wydania znajdziesz w archiwum. GitHub Releases: '+err.message);
     if(!overlay.hidden)renderArchive();
  });
 }
