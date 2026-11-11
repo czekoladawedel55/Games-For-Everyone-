@@ -16,6 +16,10 @@ Wydanie udostępnione na Google Drive na podstawie instalatora dostarczonego prz
 - Rozbrajanie pułapek, wykrywacz, blackout i żółta latarka.
 - **Inspiron 620 Tribute** — pamiątkowe okno Windows 7 i misja odnajdywania trzech fragmentów pamięci komputera.
 
+## 🛠️ W przygotowaniu: BTBlocks v1.6 Christmas Edition — Audio & UI Update
+
+Przygotowano prywatny BuildKit z nowym wspólnym silnikiem dźwięku, osobnymi ustawieniami efektów gry i interfejsu, zapamiętywaniem nicku, przyciskiem wylogowania, lokalnymi rekordami, animowanym menu, sześcioma nowymi paletami i zestawami skinów. **Nie jest to jeszcze publiczny instalator EXE — wymaga kompilacji i testów.**
+
 ## 📁 Poprzednie wersje (EXE)
 
 - **[v1.4 Christmas + Kafelkowy Labirynt](https://drive.google.com/file/d/1LEDSQbtDgdGUWsGZfwFnYnSY4MFmMmK-/view?usp=drivesdk)**
