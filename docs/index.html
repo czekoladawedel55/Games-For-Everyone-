@@ -83,12 +83,12 @@ body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:
         <div class="eyebrow">Welcome to BTBlocks</div>
         <h1>Play. Build.<br><span>Have fun.</span></h1>
         <p class="desc">A growing collection of mini-games with nostalgic themes, made for everyone. Download the newest Windows version and open the Aero Explorer to browse previous releases. GitHub Releases update automatically.</p>
-        <div class="tags"><span class="tag">🎮 Mini-games</span><span class="tag">🪟 Aero vibes</span><span class="tag">🌐 Multiplayer experiments</span><span class="tag" id="version-tag">Checking versions…</span></div>
+        <div class="tags"><span class="tag">🎮 Mini-games</span><span class="tag">🪟 Aero vibes</span><span class="tag">🌐 Multiplayer experiments</span><span class="tag" id="version-tag">Latest: v1.4 Christmas Edition</span></div>
         <div class="actions">
-          <a class="primary" id="download" href="https://drive.google.com/drive/folders/1IukMN2PovLvg3zymgEAW9egRLSLlzWeU?usp=drive_link" target="_blank" rel="noopener noreferrer">⬇ Open download folder</a>
+          <a class="primary" id="download" href="https://drive.google.com/file/d/1dfKcGXOCyDXvSMeBSUTDf5Ev3UmZKw1Y/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">⬇ Download BTBlocks v1.4 Christmas EXE</a>
           <button class="secondary" type="button" id="archive-btn">📁 Previous versions</button>
         </div>
-        <div class="status" id="download-status" role="status" aria-live="polite">Checking for the newest BTBlocks EXE…</div>
+        <div class="status" id="download-status" role="status" aria-live="polite">BTBlocks v1.4 Christmas Edition is available on Google Drive.</div>
       </div>
       <div class="hero-art" role="img" aria-label="BTBlocks colorful 3D-style blocks"><div class="sun"></div><div class="blocks"><div class="block">B</div><div class="block">T</div><div class="block">★</div></div></div>
     </div>
@@ -155,7 +155,7 @@ updateClock();setInterval(updateClock,30000);
 function loadReleases(){
   fetch(api,{headers:{Accept:'application/vnd.github+json'}}).then(function(response){if(!response.ok)throw Error('GitHub API status '+response.status);return response.json();}).then(function(data){
     var githubReleases=data.filter(function(r){return !r.draft&&!r.prerelease&&exeAssets(r).length>0;});
-    function versionNumber(r){var m=version(r).match(/v?(\\d+)\\.(\\d+)(?:\\.(\\d+))?/i);return m?(+m[1])*1000000+(+m[2])*1000+(+(m[3]||0)):0;}
+    function versionNumber(r){var m=version(r).match(/v?(\d+)\.(\d+)(?:\.(\d+))?/i);return m?(+m[1])*1000000+(+m[2])*1000+(+(m[3]||0)):0;}
     releases=githubReleases.slice();
     archivedDrive.forEach(function(d){if(!releases.some(function(r){return versionNumber(r)===versionNumber(d);}))releases.push(d);});
     releases.sort(function(a,b){return versionNumber(b)-versionNumber(a)||new Date(b.published_at||b.created_at)-new Date(a.published_at||a.created_at);});
