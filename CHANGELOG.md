@@ -1,6 +1,6 @@
 # BTBlocks — historia i plan wydań
 
-## v1.4 — Christmas Edition + Kafelkowy Labirynt (następne wydanie, EXE w przygotowaniu)
+## v1.4 — Christmas Edition + Kafelkowy Labirynt (wydana, EXE na Google Drive)
 
 - Zachowuje wszystkie minigry Christmas Edition, w tym Gift Catcher.
 - Proceduralny labirynt 2D oparty na fakturze kafelków i przejściach między nimi.
@@ -8,7 +8,7 @@
 - Skrzynie z pułapkami, rozbrajanie i wykrywacz niebezpieczeństw.
 - Blackout trwający pięć minut i żółte światło latarki.
 - Kod i BuildKit zachowane w prywatnym archiwum developerskim.
-- **Nowy EXE jeszcze nie zbudowany, przetestowany ani udostępniony.**
+- **[Pobierz EXE v1.4 z labiryntem](https://drive.google.com/file/d/1LEDSQbtDgdGUWsGZfwFnYnSY4MFmMmK-/view?usp=drivesdk)** — instalator dostarczony przez autora; nie został niezależnie przetestowany w środowisku Windows.
 
 ## v1.5 — Christmas Edition + Inspiron 620 Tribute (planowane po v1.4)
 
