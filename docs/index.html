@@ -82,13 +82,13 @@ body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:
       <div>
         <div class="eyebrow">Welcome to BTBlocks</div>
         <h1>Play. Build.<br><span>Have fun.</span></h1>
-        <p class="desc">A growing collection of mini-games with nostalgic themes, made for everyone. The newest Windows version appears here automatically when a verified GitHub Release is published.</p>
+        <p class="desc">A growing collection of mini-games with nostalgic themes, made for everyone. Download the newest Windows version and open the Aero Explorer to browse previous releases. GitHub Releases update automatically.</p>
         <div class="tags"><span class="tag">🎮 Mini-games</span><span class="tag">🪟 Aero vibes</span><span class="tag">🌐 Multiplayer experiments</span><span class="tag" id="version-tag">Checking versions…</span></div>
         <div class="actions">
           <a class="primary" id="download" href="https://drive.google.com/drive/folders/1IukMN2PovLvg3zymgEAW9egRLSLlzWeU?usp=drive_link" target="_blank" rel="noopener noreferrer">⬇ Open download folder</a>
           <button class="secondary" type="button" id="archive-btn">📁 Previous versions</button>
         </div>
-        <div class="status" id="download-status" role="status" aria-live="polite">Checking GitHub Releases for the latest downloadable EXE…</div>
+        <div class="status" id="download-status" role="status" aria-live="polite">Checking for the newest BTBlocks EXE…</div>
       </div>
       <div class="hero-art" role="img" aria-label="BTBlocks colorful 3D-style blocks"><div class="sun"></div><div class="blocks"><div class="block">B</div><div class="block">T</div><div class="block">★</div></div></div>
     </div>
@@ -114,7 +114,11 @@ body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:
 'use strict';
 var owner='czekoladawedel55',repo='Games-For-Everyone-';
 var api='https://api.github.com/repos/'+owner+'/'+repo+'/releases?per_page=100';
-var releases=[],older=[],fallback='https://drive.google.com/drive/folders/1IukMN2PovLvg3zymgEAW9egRLSLlzWeU?usp=drive_link';
+var releases=[],older=[],fallback='https://drive.google.com/file/d/1dfKcGXOCyDXvSMeBSUTDf5Ev3UmZKw1Y/view?usp=drivesdk';
+var archivedDrive=[
+  {tag_name:'v1.4 Christmas Edition',published_at:'2026-11-11T22:01:32Z',assets:[{name:'BTBlocks-v1.4-Christmas-Setup.exe',browser_download_url:fallback}]},
+  {tag_name:'v1.3',published_at:'2026-10-15T20:40:19Z',assets:[{name:'BTBlocks-v1.3-Setup.exe',browser_download_url:'https://drive.google.com/file/d/1UYH18dH5nfyBhhsiaHZjmY4161xGmSVP/view?usp=drivesdk'}]}
+];
 var overlay=document.getElementById('archive-overlay'),search=document.getElementById('search-versions'),files=document.getElementById('archive-files');
 function exeAssets(release){return (release.assets||[]).filter(function(a){return /\.exe$/i.test(a.name||'')&&a.browser_download_url;});}
 function formatDate(d){if(!d)return 'Unknown date';var x=new Date(d);return isNaN(x.getTime())?'Unknown date':x.toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'});}
@@ -135,7 +139,7 @@ function renderArchive(){
       row.appendChild(ico);row.appendChild(name);row.appendChild(date);row.appendChild(link);files.appendChild(row);shown++;
     });
   });
-  if(!shown){var empty=document.createElement('div');empty.className='empty';empty.textContent=q?'No versions match your search.':'No older EXE releases yet. When v1.4 is published, v1.3 will appear here automatically.';files.appendChild(empty);}
+  if(!shown){var empty=document.createElement('div');empty.className='empty';empty.textContent=q?'No versions match your search.':'No older EXE releases yet. Older downloads will appear here as soon as they are available.';files.appendChild(empty);}
   setText('archive-status',shown+' old downloadable EXE file(s) • GitHub Releases');
 }
 function show(){overlay.hidden=false;search.value='';renderArchive();document.getElementById('archive-window').focus();}
@@ -150,24 +154,30 @@ function updateClock(){var d=new Date();setText('clock',d.toLocaleTimeString([],
 updateClock();setInterval(updateClock,30000);
 function loadReleases(){
   fetch(api,{headers:{Accept:'application/vnd.github+json'}}).then(function(response){if(!response.ok)throw Error('GitHub API status '+response.status);return response.json();}).then(function(data){
-    releases=data.filter(function(r){return !r.draft&&!r.prerelease&&exeAssets(r).length>0;}).sort(function(a,b){return new Date(b.published_at||b.created_at)-new Date(a.published_at||a.created_at);});
+    var githubReleases=data.filter(function(r){return !r.draft&&!r.prerelease&&exeAssets(r).length>0;});
+    function versionNumber(r){var m=version(r).match(/v?(\\d+)\\.(\\d+)(?:\\.(\\d+))?/i);return m?(+m[1])*1000000+(+m[2])*1000+(+(m[3]||0)):0;}
+    releases=githubReleases.slice();
+    archivedDrive.forEach(function(d){if(!releases.some(function(r){return versionNumber(r)===versionNumber(d);}))releases.push(d);});
+    releases.sort(function(a,b){return versionNumber(b)-versionNumber(a)||new Date(b.published_at||b.created_at)-new Date(a.published_at||a.created_at);});
     older=releases.slice(1);
     var button=document.getElementById('download');
     if(releases.length){
       var newest=releases[0],asset=exeAssets(newest)[0];
       button.href=asset.browser_download_url;button.removeAttribute('target');button.textContent='⬇ Download '+version(newest)+' EXE';
       setText('version-tag','Latest: '+version(newest));
-      setText('download-status','✓ Latest published GitHub Release: '+version(newest)+' • '+asset.name+' • '+formatDate(newest.published_at));
+      setText('download-status','✓ Newest available version: '+version(newest)+' • '+asset.name+' • '+formatDate(newest.published_at));
     }else{
-      button.href=fallback;button.target='_blank';button.textContent='↗ Open BTBlocks download folder';
-      setText('version-tag','v1.3 • Drive download');
-      setText('download-status','No verified GitHub EXE release found yet. You can open the project download folder on Google Drive.');
+      button.href=fallback;button.target='_blank';button.textContent='⬇ Download BTBlocks v1.4 Christmas EXE';
+      setText('version-tag','v1.4 • Christmas Edition');
+      setText('download-status','BTBlocks v1.4 is available from Google Drive.');
     }
     if(!overlay.hidden)renderArchive();
   }).catch(function(err){
-    setText('version-tag','v1.3 • Downloads');
-    setText('download-status','GitHub releases could not be loaded ('+err.message+'). Use the Google Drive download folder or try again later.');
-    older=[];if(!overlay.hidden)renderArchive();
+    setText('version-tag','v1.4 • Christmas Edition');
+    var button=document.getElementById('download');
+    button.href=fallback;button.target='_blank';button.textContent='⬇ Download BTBlocks v1.4 EXE';
+    setText('download-status','BTBlocks v1.4 is available on Google Drive. Could not check GitHub Releases ('+err.message+').');
+    releases=archivedDrive.slice();older=archivedDrive.slice(1);if(!overlay.hidden)renderArchive();
   });
 }
 loadReleases();
