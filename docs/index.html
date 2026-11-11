@@ -89,6 +89,12 @@ body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:
           <button class="secondary" type="button" id="archive-btn">📁 Previous versions</button>
         </div>
         <div class="status" id="download-status" role="status" aria-live="polite">BTBlocks v1.5 Christmas Edition z Kafelkowym Labiryntem i misją pożegnalną Inspirona 620 jest dostępne na Google Drive.</div>
+        <div class="status" style="border:1px solid #c3dcec;background:#eaf7ff;padding:12px 14px;border-radius:7px;margin-top:15px">
+          <strong>🛠️ Rozwijana wersja: BTBlocks v1.6 Christmas Edition — Audio &amp; UI Update</strong>
+          <div style="margin-top:6px">Nowe dźwięki gier i interfejsu z osobnymi przełącznikami, zapis nicku i rekordów, wylogowanie, animowane menu, lepsze motywy i skiny. <strong>Status: testy i budowanie EXE</strong> — dostępna do pobrania pozostaje v1.5.</div>
+        </div>
+        <div class="status" style="font-size:11px;margin-top:8px">ℹ️ Starsze instalatory mogą nadpisywać tę samą instalację i skrót Windows. Nazwy w archiwum odnoszą się do plików EXE, a nie do już zainstalowanego skrótu. Poprawione instalatory będą używać oddzielnych nazw i folderów.</div>
+
       </div>
       <div class="hero-art" role="img" aria-label="BTBlocks colorful 3D-style blocks"><div class="sun"></div><div class="blocks"><div class="block">B</div><div class="block">T</div><div class="block">★</div></div></div>
     </div>
@@ -103,7 +109,7 @@ body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:
 <div class="taskbar"><button class="start" type="button" id="start-btn">◉ Start</button><button class="task-open" type="button" id="task-explorer">📁 Releases</button><div class="task-clock" id="clock" aria-label="Clock"></div></div>
 <div class="overlay" id="archive-overlay" hidden>
   <div class="window explorer" role="dialog" aria-modal="true" aria-labelledby="archive-title" tabindex="-1" id="archive-window">
-    <div class="window-titlebar"><span class="window-icon">📁</span><span class="window-title" id="archive-title">BTBlocks Explorer — Previous versions</span><div class="window-buttons"><button class="win-control close" id="close-explorer" aria-label="Close previous versions" style="cursor:pointer">×</button></div></div>
+    <div class="window-titlebar"><span class="window-icon">📁</span><span class="window-title" id="archive-title">BTBlocks Explorer — Archiwum wersji EXE</span><div class="window-buttons"><button class="win-control close" id="close-explorer" aria-label="Close previous versions" style="cursor:pointer">×</button></div></div>
     <div class="explorer-top"><button class="nav-arrow" aria-label="Back" id="back-button">‹</button><div class="breadcrumbs">💻 Computer ❯ BTBlocks ❯ Archive</div><input id="search-versions" class="searchbox" type="search" placeholder="Search versions..." aria-label="Search versions"></div>
     <div class="explorer-body"><aside class="explorer-side"><div>⭐ Favorites</div><div class="selected">📁 Previous versions</div><div>💻 BTBlocks</div><div>🗂️ Downloads</div></aside><div class="files" id="archive-files"><div class="empty">Loading previous GitHub releases…</div></div></div>
     <div class="explorer-status" id="archive-status">Archive • GitHub Releases</div>
@@ -116,9 +122,9 @@ var owner='czekoladawedel55',repo='Games-For-Everyone-';
 var api='https://api.github.com/repos/'+owner+'/'+repo+'/releases?per_page=100';
 var releases=[],older=[];
 var archivedDrive=[
-  {tag_name:'v1.4 Christmas + Kafelkowy Labirynt',published_at:'2026-11-12T00:00:00Z',assets:[{name:'BTBlocks-v1.4-Christmas-Tile-Maze-Setup.exe',browser_download_url:'https://drive.google.com/file/d/1LEDSQbtDgdGUWsGZfwFnYnSY4MFmMmK-/view?usp=drivesdk'}]},
-  {tag_name:'v1.4 Christmas (Original)',published_at:'2026-11-11T22:01:32Z',assets:[{name:'BTBlocks-v1.4-Christmas-Original-Setup.exe',browser_download_url:'https://drive.google.com/file/d/1dfKcGXOCyDXvSMeBSUTDf5Ev3UmZKw1Y/view?usp=drivesdk'}]},
-  {tag_name:'v1.3',published_at:'2026-10-15T20:40:19Z',assets:[{name:'BTBlocks-v1.3-Setup.exe',browser_download_url:'https://drive.google.com/file/d/1UYH18dH5nfyBhhsiaHZjmY4161xGmSVP/view?usp=drivesdk'}]}
+  {tag_name:'BTBlocks v1.4 — Christmas Tile Maze',published_at:'2026-11-12T00:00:00Z',assets:[{name:'BTBlocks-v1.4-Christmas-Tile-Maze-Setup.exe',browser_download_url:'https://drive.google.com/file/d/1LEDSQbtDgdGUWsGZfwFnYnSY4MFmMmK-/view?usp=drivesdk'}]},
+  {tag_name:'BTBlocks v1.4 — Christmas Original',published_at:'2026-11-11T22:01:32Z',assets:[{name:'BTBlocks-v1.4-Christmas-Original-Setup.exe',browser_download_url:'https://drive.google.com/file/d/1dfKcGXOCyDXvSMeBSUTDf5Ev3UmZKw1Y/view?usp=drivesdk'}]},
+  {tag_name:'BTBlocks v1.3 — klasyczna',published_at:'2026-10-15T20:40:19Z',assets:[{name:'BTBlocks-v1.3-Setup.exe',browser_download_url:'https://drive.google.com/file/d/1UYH18dH5nfyBhhsiaHZjmY4161xGmSVP/view?usp=drivesdk'}]}
 ];
 var overlay=document.getElementById('archive-overlay'),search=document.getElementById('search-versions'),files=document.getElementById('archive-files');
 function exeAssets(release){return (release.assets||[]).filter(function(a){return /\.exe$/i.test(a.name||'')&&a.browser_download_url;});}
@@ -134,7 +140,7 @@ function renderArchive(){
     exeAssets(r).forEach(function(asset){
       var row=document.createElement('div');row.className='file-row';
       var ico=document.createElement('span');ico.textContent='📦';ico.setAttribute('aria-hidden','true');
-      var name=document.createElement('span');name.className='file-name';name.title=asset.name;name.textContent=version(r)+' — '+asset.name;
+      var name=document.createElement('span');name.className='file-name';name.title=asset.name;name.textContent=version(r)+' • '+asset.name;
       var date=document.createElement('span');date.className='file-date';date.textContent=formatDate(r.published_at);
       var link=document.createElement('a');link.className='file-download';link.href=asset.browser_download_url;link.rel='noopener noreferrer';link.textContent='⬇ EXE';
       row.appendChild(ico);row.appendChild(name);row.appendChild(date);row.appendChild(link);files.appendChild(row);shown++;
@@ -153,7 +159,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!overlay.hi
 search.addEventListener('input',renderArchive);
 function updateClock(){var d=new Date();setText('clock',d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})+'\n'+d.toLocaleDateString());}
 updateClock();setInterval(updateClock,30000);
-var currentDrive={tag_name:'v1.5 Christmas + Inspiron 620 Tribute',published_at:'2026-11-12T00:00:00Z',assets:[{name:'BTBlocks-v1.5-Christmas-Inspiron-Tribute-Setup.exe',browser_download_url:'https://drive.google.com/file/d/1NIsA4JbjmLpiS4HRg8abveJIuGhEdyB_/view?usp=drivesdk'}]};
+var currentDrive={tag_name:'BTBlocks v1.5 — Christmas Inspiron Tribute',published_at:'2026-11-12T00:00:00Z',assets:[{name:'BTBlocks-v1.5-Christmas-Inspiron-Tribute-Setup.exe',browser_download_url:'https://drive.google.com/file/d/1NIsA4JbjmLpiS4HRg8abveJIuGhEdyB_/view?usp=drivesdk'}]};
 function showLatest(r){
  var asset=exeAssets(r)[0],button=document.getElementById('download');
  button.href=asset.browser_download_url;button.target='_blank';button.rel='noopener noreferrer';button.removeAttribute('aria-disabled');
