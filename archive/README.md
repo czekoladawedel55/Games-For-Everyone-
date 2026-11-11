@@ -9,4 +9,4 @@ Public old Windows installer files are preserved on Google Drive.
 
 [Open the old versions folder](https://drive.google.com/drive/folders/1oTz7OIb2q6pUFwwtqRCIo9Wvi-bj0iZr).
 
-The v1.4 Christmas Tile Maze source preview is kept in the **private development archive**; it never had a public Windows EXE. The new **v1.5 Christmas Edition + Inspiron 620 Tribute** is under development and does not yet have a compiled EXE. This public archive does not contain private game source files.
+The current **[v1.4 Christmas Tile Maze Windows EXE](https://drive.google.com/file/d/1LEDSQbtDgdGUWsGZfwFnYnSY4MFmMmK-/view?usp=drivesdk)** is available separately in the main public downloads folder. The **v1.5 Inspiron 620 Tribute** remains under development. The public archive does not contain private game source files.
