@@ -1,11 +1,12 @@
-# BTBlocks — previous versions archive
+# BTBlocks — Old Versions Archive
 
-Older versions are preserved for historical downloads. **Current version is [v1.4 Christmas Edition](https://drive.google.com/file/d/1dfKcGXOCyDXvSMeBSUTDf5Ev3UmZKw1Y/view?usp=drivesdk).**
+Public old Windows installer files are preserved on Google Drive.
 
-| Version | Installer | Status |
-| --- | --- | --- |
-| v1.3 | [BTBlocks-v1.3-Setup.exe](https://drive.google.com/file/d/1UYH18dH5nfyBhhsiaHZjmY4161xGmSVP/view?usp=drivesdk) | Archived |
+| Version | Download | Notes |
+|---|---|---|
+| v1.4 Christmas Original | [EXE](https://drive.google.com/file/d/1dfKcGXOCyDXvSMeBSUTDf5Ev3UmZKw1Y/view?usp=drivesdk) | Original Christmas edition, **without** Kafelkowy Labirynt |
+| v1.3 | [EXE](https://drive.google.com/file/d/1UYH18dH5nfyBhhsiaHZjmY4161xGmSVP/view?usp=drivesdk) | Previous version |
 
-[Open archive folder in Google Drive](https://drive.google.com/drive/folders/1oTz7OIb2q6pUFwwtqRCIo9Wvi-bj0iZr).
+[Open the old versions folder](https://drive.google.com/drive/folders/1oTz7OIb2q6pUFwwtqRCIo9Wvi-bj0iZr).
 
-New versions will replace the latest download button; the prior release will be preserved here and in the Aero Explorer window.
+The new Tile Maze edition is **not** published as an EXE yet. This public archive does not contain private game source files.
