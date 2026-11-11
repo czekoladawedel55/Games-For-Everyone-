@@ -1,5 +1,15 @@
 # BTBlocks — historia wydań
 
+## v1.6 — Christmas Edition + Inspiron 620 Tribute (prywatna wersja developerska)
+
+- Silnik efektów Web Audio i dźwięki rozgrywki/interfejsu, osobne przełączniki i regulacja głośności.
+- Zapamiętywanie nicku i możliwość wylogowania oraz zmiany gracza.
+- Lokalne rekordy i zapisy części minigier przypisane do nicku.
+- Animacje menu z opcją ich wyłączenia.
+- Nowe palety interfejsu Frost Aero, Aurora, Christmas, Graphite, Sunset i Classic.
+- Zestawy skinów i zapamiętywanie wyglądu postaci.
+- Kod i BuildKit zapisane prywatnie; **nie opublikowano jeszcze EXE; testy w Windows pozostają do wykonania**.
+
 ## v1.5 — Christmas Edition + Inspiron 620 Tribute (najnowsza, wydana)
 
 - Minigry i świąteczny motyw z poprzednich wersji.
