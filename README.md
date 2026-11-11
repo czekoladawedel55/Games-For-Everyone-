@@ -2,9 +2,11 @@
 
 ## 🪟 [BTBlocks — strona Windows 7 Aero](https://czekoladawedel55.github.io/Games-For-Everyone-/)
 
-## 🎄 Następne wydanie: BTBlocks v1.4 Christmas Edition — Kafelkowy Labirynt
+## 🎄 Najnowsza wersja: BTBlocks v1.4 Christmas Edition — Kafelkowy Labirynt
 
-**To będzie kolejny publiczny instalator EXE. Obecnie oczekuje na kompilację i testy.**
+**[⬇ Pobierz instalator BTBlocks v1.4 Christmas + Kafelkowy Labirynt (EXE)](https://drive.google.com/file/d/1LEDSQbtDgdGUWsGZfwFnYnSY4MFmMmK-/view?usp=drivesdk)**
+
+Wydanie udostępnione na Google Drive na podstawie instalatora przekazanego przez autora. Plik rozpoznany jako instalator Windows; nie przeprowadzono niezależnego audytu bezpieczeństwa ani pełnego testu uruchomienia.
 
 - Wszystkie minigry z Christmas Edition, w tym Gift Catcher.
 - **Kafelkowy Labirynt**: proceduralny labirynt 2D z widokiem z góry, inspirowany szczelinami między kafelkami.
