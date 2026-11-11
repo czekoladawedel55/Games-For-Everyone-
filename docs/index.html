@@ -85,10 +85,10 @@ body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:
         <p class="desc">Następne wydanie: BTBlocks v1.4 Christmas Edition z Kafelkowym Labiryntem. Później v1.5 z misją pożegnalną Inspirona 620. Starsze instalatory są w eksploratorze wersji.</p>
         <div class="tags"><span class="tag">🎮 Mini-games</span><span class="tag">🪟 Aero vibes</span><span class="tag">🌐 Multiplayer experiments</span><span class="tag" id="version-tag">v1.4 Christmas • Kafelkowy Labirynt</span></div>
         <div class="actions">
-          <a class="primary" id="download" aria-disabled="true">⏳ BTBlocks v1.4 Christmas + Labirynt — EXE w przygotowaniu</a>
+          <a class="primary" id="download" href="https://drive.google.com/file/d/1LEDSQbtDgdGUWsGZfwFnYnSY4MFmMmK-/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">⬇ Pobierz v1.4 Christmas + Kafelkowy Labirynt EXE</a>
           <button class="secondary" type="button" id="archive-btn">📁 Previous versions</button>
         </div>
-        <div class="status" id="download-status" role="status" aria-live="polite">BTBlocks v1.4 Christmas Edition z Kafelkowym Labiryntem będzie kolejnym wydaniem. EXE czeka na kompilację i testy. v1.5 z pożegnaniem Inspirona 620 pojawi się później.</div>
+        <div class="status" id="download-status" role="status" aria-live="polite">BTBlocks v1.4 Christmas Edition z Kafelkowym Labiryntem jest dostępne do pobrania na Google Drive. v1.5 z pożegnaniem Inspirona 620 pojawi się później.</div>
       </div>
       <div class="hero-art" role="img" aria-label="BTBlocks colorful 3D-style blocks"><div class="sun"></div><div class="blocks"><div class="block">B</div><div class="block">T</div><div class="block">★</div></div></div>
     </div>
@@ -152,31 +152,37 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!overlay.hi
 search.addEventListener('input',renderArchive);
 function updateClock(){var d=new Date();setText('clock',d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})+'\n'+d.toLocaleDateString());}
 updateClock();setInterval(updateClock,30000);
-function showNoCurrentRelease(msg){
- var button=document.getElementById('download');
- button.removeAttribute('href');button.removeAttribute('target');button.textContent='⏳ BTBlocks v1.4 Christmas + Labirynt — EXE w przygotowaniu';
- button.setAttribute('aria-disabled','true');
- setText('version-tag','v1.4 Christmas • Kafelkowy Labirynt');
- setText('download-status',msg);
+var currentDrive={tag_name:'v1.4 Christmas + Kafelkowy Labirynt',published_at:'2026-11-12T00:00:00Z',assets:[{name:'BTBlocks-v1.4-Christmas-Tile-Maze-Setup.exe',browser_download_url:'https://drive.google.com/file/d/1LEDSQbtDgdGUWsGZfwFnYnSY4MFmMmK-/view?usp=drivesdk'}]};
+function showLatest(r){
+ var asset=exeAssets(r)[0],button=document.getElementById('download');
+ button.href=asset.browser_download_url;button.target='_blank';button.rel='noopener noreferrer';button.removeAttribute('aria-disabled');
+ button.textContent='⬇ Pobierz '+version(r)+' — EXE';
+ setText('version-tag','Najnowsza: '+version(r));
+ setText('download-status','✓ Dostępna wersja: '+version(r)+' • '+asset.name);
+}
+function number(r){
+ var m=version(r).match(/v?(\d+)\.(\d+)(?:\.(\d+))?/i);
+ return m?Number(m[1])*1000000+Number(m[2])*1000+Number(m[3]||0):0;
 }
 function loadReleases(){
- showNoCurrentRelease('Najpierw wydamy v1.4 Christmas Edition z Kafelkowym Labiryntem. Instalator EXE nie został jeszcze zbudowany. Następna będzie v1.5 z pożegnaniem Inspirona 620. Starsze EXE pobierzesz w archiwum.');
+ showLatest(currentDrive);
  older=archivedDrive.slice();
  if(!overlay.hidden)renderArchive();
  fetch(api,{headers:{Accept:'application/vnd.github+json'}}).then(function(response){if(!response.ok)throw Error('GitHub API status '+response.status);return response.json();}).then(function(data){
-   releases=data.filter(function(r){return !r.draft&&!r.prerelease&&exeAssets(r).length>0;}).sort(function(a,b){return new Date(b.published_at||b.created_at)-new Date(a.published_at||a.created_at);});
-   older=archivedDrive.concat(releases.slice(1));
-   if(releases.length){
-     var newest=releases[0],asset=exeAssets(newest)[0],button=document.getElementById('download');
-     button.href=asset.browser_download_url;button.removeAttribute('aria-disabled');button.textContent='⬇ Download '+version(newest)+' EXE';
-     setText('version-tag','Latest: '+version(newest));
-     setText('download-status','✓ GitHub Release: '+version(newest)+' • '+asset.name);
+   releases=data.filter(function(r){return !r.draft&&!r.prerelease&&exeAssets(r).length>0;}).sort(function(a,b){return number(b)-number(a)||new Date(b.published_at||b.created_at)-new Date(a.published_at||a.created_at);});
+   var newer=releases.filter(function(r){return number(r)>number(currentDrive);});
+   if(newer.length){
+     showLatest(newer[0]);
+     older=[currentDrive].concat(archivedDrive,releases.filter(function(r){return r.id!==newer[0].id&&number(r)>number(currentDrive);}));
+   }else{
+     older=archivedDrive.slice();
+     setText('download-status','✓ BTBlocks v1.4 Christmas + Kafelkowy Labirynt dostępne na Google Drive. Następna wersja: v1.5 Inspiron 620 Tribute.');
    }
    if(!overlay.hidden)renderArchive();
- }).catch(function(err){
-    older=archivedDrive.slice();
-    showNoCurrentRelease('v1.4 Christmas z labiryntem oczekuje na instalator EXE; v1.5 Inspiron Tribute będzie po niej. Starsze wersje są w archiwum. GitHub Releases: '+err.message);
-    if(!overlay.hidden)renderArchive();
+ }).catch(function(){
+   showLatest(currentDrive);older=archivedDrive.slice();
+   setText('download-status','✓ BTBlocks v1.4 Christmas z labiryntem dostępne na Google Drive. Automatyczne sprawdzanie GitHub Releases chwilowo niedostępne.');
+   if(!overlay.hidden)renderArchive();
  });
 }
 loadReleases();
