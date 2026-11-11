@@ -1,9 +1,11 @@
-# BTBlocks — old versions archive
+# BTBlocks — previous versions archive
 
-Place superseded installers here **after** a new release has been successfully built, tested, and published.
+Older versions are preserved for historical downloads. **Current version is [v1.4 Christmas Edition](https://drive.google.com/file/d/1dfKcGXOCyDXvSMeBSUTDf5Ev3UmZKw1Y/view?usp=drivesdk).**
 
-| Version | Status | Notes |
+| Version | Installer | Status |
 | --- | --- | --- |
-| v1.3 | Awaiting upload | Add the installer only after it has been verified |
+| v1.3 | [BTBlocks-v1.3-Setup.exe](https://drive.google.com/file/d/1UYH18dH5nfyBhhsiaHZjmY4161xGmSVP/view?usp=drivesdk) | Archived |
 
-For larger binary files, consider GitHub Releases and link historical releases here instead of storing all `.exe` files in Git history.
+[Open archive folder in Google Drive](https://drive.google.com/drive/folders/1oTz7OIb2q6pUFwwtqRCIo9Wvi-bj0iZr).
+
+New versions will replace the latest download button; the prior release will be preserved here and in the Aero Explorer window.
