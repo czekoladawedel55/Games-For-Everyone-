@@ -1,37 +1,36 @@
 # 🧱 BTBlocks — Games for Everyone
 
-## 🪟 [BTBlocks — strona Windows 7 Aero](https://czekoladawedel55.github.io/Games-For-Everyone-/)
+## 🪟 [Otwórz stronę BTBlocks — Windows 7 Aero](https://czekoladawedel55.github.io/Games-For-Everyone-/)
 
-## 🎄 Najnowsza wersja: BTBlocks v1.4 Christmas Edition — Kafelkowy Labirynt
+## 🎄 Najnowsza wersja: BTBlocks v1.5 Christmas Edition — Inspiron 620 Tribute
 
-**[⬇ Pobierz instalator BTBlocks v1.4 Christmas + Kafelkowy Labirynt (EXE)](https://drive.google.com/file/d/1LEDSQbtDgdGUWsGZfwFnYnSY4MFmMmK-/view?usp=drivesdk)**
+**[⬇ Pobierz BTBlocks v1.5 Christmas — instalator EXE](https://drive.google.com/file/d/1NIsA4JbjmLpiS4HRg8abveJIuGhEdyB_/view?usp=drivesdk)**
 
-Wydanie udostępnione na Google Drive na podstawie instalatora przekazanego przez autora. Plik rozpoznany jako instalator Windows; nie przeprowadzono niezależnego audytu bezpieczeństwa ani pełnego testu uruchomienia.
+Wydanie udostępnione na Google Drive na podstawie instalatora dostarczonego przez autora. Plik został rozpoznany jako wykonywalny instalator Windows, lecz nie przeprowadzono pełnego audytu bezpieczeństwa ani niezależnych testów działania.
 
-- Wszystkie minigry z Christmas Edition, w tym Gift Catcher.
-- **Kafelkowy Labirynt**: proceduralny labirynt 2D z widokiem z góry, inspirowany szczelinami między kafelkami.
-- Ekwipunek i loot ze skrzyń, teleport do handlarza, sprzedaż znalezisk.
-- Ulepszenia broni, rozbrajacza i wykrywacza pułapek.
-- Pięciominutowe blackouty i żółta latarka.
+### Co zawiera v1.5?
 
-**[Prywatny kod i paczka developerska](https://drive.google.com/drive/folders/1Dfd0wW9cv_9mmNvNRWcqG4FUp7DjQRi6)** — dostęp wyłącznie dla właściciela. Kod gry nie jest publikowany w tym repozytorium.
+- Gry znane z Christmas Edition, w tym Gift Catcher.
+- **Kafelkowy Labirynt** 2D: eksploracja proceduralnych korytarzy, zbieranie łupów i skrzyń.
+- Ekwipunek, teleport do handlarza, sprzedaż znalezisk i ulepszenia.
+- Rozbrajanie pułapek, wykrywacz, blackout i żółta latarka.
+- **Inspiron 620 Tribute** — pamiątkowe okno Windows 7 i misja odnajdywania trzech fragmentów pamięci komputera.
 
-## 🖥️ Kolejne wydanie: BTBlocks v1.5 Christmas Edition — Inspiron 620 Tribute
+## 📁 Poprzednie wersje (EXE)
 
-**Dopiero po v1.4.** Obejmie świąteczne gry, Kafelkowy Labirynt i pożegnalną misję z fragmentami pamięci Inspirona 620. Kod v1.5 jest przygotowany prywatnie; EXE nie został jeszcze opublikowany.
-
-## 📁 Starsze wersje — pobierz EXE
-
-- [v1.4 Christmas Original (bez labiryntu)](https://drive.google.com/file/d/1dfKcGXOCyDXvSMeBSUTDf5Ev3UmZKw1Y/view?usp=drivesdk)
+- **[v1.4 Christmas + Kafelkowy Labirynt](https://drive.google.com/file/d/1LEDSQbtDgdGUWsGZfwFnYnSY4MFmMmK-/view?usp=drivesdk)**
+- [v1.4 Christmas Original, bez labiryntu](https://drive.google.com/file/d/1dfKcGXOCyDXvSMeBSUTDf5Ev3UmZKw1Y/view?usp=drivesdk)
 - [v1.3](https://drive.google.com/file/d/1UYH18dH5nfyBhhsiaHZjmY4161xGmSVP/view?usp=drivesdk)
-- [Folder archiwum Google Drive](https://drive.google.com/drive/folders/1oTz7OIb2q6pUFwwtqRCIo9Wvi-bj0iZr)
+- [Folder Archive - Old Versions](https://drive.google.com/drive/folders/1oTz7OIb2q6pUFwwtqRCIo9Wvi-bj0iZr)
 
 ## 💻 Zgodność
 
-Instalatory Electron 22 są przeznaczone dla Windows 7–11 (64-bit). Windows XP/Vista nie są obsługiwane przez ten instalator.
+Docelowo: Windows 7–11 64-bit, Electron 22. Windows XP/Vista nie są obsługiwane przez ten instalator.
 
-## 🛠️ Kontakt i zmiany
+## 🔐 Prywatność kodu
+
+Publiczne repozytorium zawiera stronę pobierania i opisy wydań. **Kod źródłowy gry i BuildKit są przechowywane prywatnie**, nie są publikowane tutaj.
+
+## 🛠️ Zgłoszenia i historia
 
 [Zgłoś błąd](../../issues) · [Changelog](CHANGELOG.md) · [Archiwum](archive/README.md)
-
-Kod strony WWW jest publiczny, kod gry pozostaje prywatny.
