@@ -83,12 +83,12 @@ body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:
         <div class="eyebrow">Welcome to BTBlocks</div>
         <h1>Play. Build.<br><span>Have fun.</span></h1>
         <p class="desc">A growing collection of mini-games with nostalgic themes, made for everyone. Download the newest Windows version and open the Aero Explorer to browse previous releases. GitHub Releases update automatically.</p>
-        <div class="tags"><span class="tag">🎮 Mini-games</span><span class="tag">🪟 Aero vibes</span><span class="tag">🌐 Multiplayer experiments</span><span class="tag" id="version-tag">Latest: v1.4 Christmas Edition</span></div>
+        <div class="tags"><span class="tag">🎮 Mini-games</span><span class="tag">🪟 Aero vibes</span><span class="tag">🌐 Multiplayer experiments</span><span class="tag" id="version-tag">v1.4 • Tile Maze w przygotowaniu</span></div>
         <div class="actions">
-          <a class="primary" id="download" href="https://drive.google.com/file/d/1dfKcGXOCyDXvSMeBSUTDf5Ev3UmZKw1Y/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">⬇ Download BTBlocks v1.4 Christmas EXE</a>
+          <a class="primary" id="download" aria-disabled="true">⏳ Nowe v1.4 Tile Maze — w przygotowaniu</a>
           <button class="secondary" type="button" id="archive-btn">📁 Previous versions</button>
         </div>
-        <div class="status" id="download-status" role="status" aria-live="polite">BTBlocks v1.4 Christmas Edition is available on Google Drive.</div>
+        <div class="status" id="download-status" role="status" aria-live="polite">Poprzednie wersje pobierzesz w Eksploratorze wersji. Nowe EXE jest jeszcze w przygotowaniu.</div>
       </div>
       <div class="hero-art" role="img" aria-label="BTBlocks colorful 3D-style blocks"><div class="sun"></div><div class="blocks"><div class="block">B</div><div class="block">T</div><div class="block">★</div></div></div>
     </div>
@@ -114,9 +114,9 @@ body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:
 'use strict';
 var owner='czekoladawedel55',repo='Games-For-Everyone-';
 var api='https://api.github.com/repos/'+owner+'/'+repo+'/releases?per_page=100';
-var releases=[],older=[],fallback='https://drive.google.com/file/d/1dfKcGXOCyDXvSMeBSUTDf5Ev3UmZKw1Y/view?usp=drivesdk';
+var releases=[],older=[];
 var archivedDrive=[
-  {tag_name:'v1.4 Christmas Edition',published_at:'2026-11-11T22:01:32Z',assets:[{name:'BTBlocks-v1.4-Christmas-Setup.exe',browser_download_url:fallback}]},
+  {tag_name:'v1.4 Christmas (Original)',published_at:'2026-11-11T22:01:32Z',assets:[{name:'BTBlocks-v1.4-Christmas-Original-Setup.exe',browser_download_url:'https://drive.google.com/file/d/1dfKcGXOCyDXvSMeBSUTDf5Ev3UmZKw1Y/view?usp=drivesdk'}]},
   {tag_name:'v1.3',published_at:'2026-10-15T20:40:19Z',assets:[{name:'BTBlocks-v1.3-Setup.exe',browser_download_url:'https://drive.google.com/file/d/1UYH18dH5nfyBhhsiaHZjmY4161xGmSVP/view?usp=drivesdk'}]}
 ];
 var overlay=document.getElementById('archive-overlay'),search=document.getElementById('search-versions'),files=document.getElementById('archive-files');
@@ -152,33 +152,32 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!overlay.hi
 search.addEventListener('input',renderArchive);
 function updateClock(){var d=new Date();setText('clock',d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})+'\n'+d.toLocaleDateString());}
 updateClock();setInterval(updateClock,30000);
+function showNoCurrentRelease(msg){
+ var button=document.getElementById('download');
+ button.removeAttribute('href');button.removeAttribute('target');button.textContent='⏳ Nowe v1.4 Tile Maze — w przygotowaniu';
+ button.setAttribute('aria-disabled','true');
+ setText('version-tag','v1.4 • Tile Maze w przygotowaniu');
+ setText('download-status',msg);
+}
 function loadReleases(){
-  fetch(api,{headers:{Accept:'application/vnd.github+json'}}).then(function(response){if(!response.ok)throw Error('GitHub API status '+response.status);return response.json();}).then(function(data){
-    var githubReleases=data.filter(function(r){return !r.draft&&!r.prerelease&&exeAssets(r).length>0;});
-    function versionNumber(r){var m=version(r).match(/v?(\d+)\.(\d+)(?:\.(\d+))?/i);return m?(+m[1])*1000000+(+m[2])*1000+(+(m[3]||0)):0;}
-    releases=githubReleases.slice();
-    archivedDrive.forEach(function(d){if(!releases.some(function(r){return versionNumber(r)===versionNumber(d);}))releases.push(d);});
-    releases.sort(function(a,b){return versionNumber(b)-versionNumber(a)||new Date(b.published_at||b.created_at)-new Date(a.published_at||a.created_at);});
-    older=releases.slice(1);
-    var button=document.getElementById('download');
-    if(releases.length){
-      var newest=releases[0],asset=exeAssets(newest)[0];
-      button.href=asset.browser_download_url;button.removeAttribute('target');button.textContent='⬇ Download '+version(newest)+' EXE';
-      setText('version-tag','Latest: '+version(newest));
-      setText('download-status','✓ Newest available version: '+version(newest)+' • '+asset.name+' • '+formatDate(newest.published_at));
-    }else{
-      button.href=fallback;button.target='_blank';button.textContent='⬇ Download BTBlocks v1.4 Christmas EXE';
-      setText('version-tag','v1.4 • Christmas Edition');
-      setText('download-status','BTBlocks v1.4 is available from Google Drive.');
-    }
+ showNoCurrentRelease('Nowa edycja z Kafelkowym Labiryntem jest przygotowana, ale instalator EXE nie został jeszcze zbudowany. Poprzednie wydania pobierzesz w archiwum.');
+ older=archivedDrive.slice();
+ if(!overlay.hidden)renderArchive();
+ fetch(api,{headers:{Accept:'application/vnd.github+json'}}).then(function(response){if(!response.ok)throw Error('GitHub API status '+response.status);return response.json();}).then(function(data){
+   releases=data.filter(function(r){return !r.draft&&!r.prerelease&&exeAssets(r).length>0;}).sort(function(a,b){return new Date(b.published_at||b.created_at)-new Date(a.published_at||a.created_at);});
+   older=archivedDrive.concat(releases.slice(1));
+   if(releases.length){
+     var newest=releases[0],asset=exeAssets(newest)[0],button=document.getElementById('download');
+     button.href=asset.browser_download_url;button.removeAttribute('aria-disabled');button.textContent='⬇ Download '+version(newest)+' EXE';
+     setText('version-tag','Latest: '+version(newest));
+     setText('download-status','✓ GitHub Release: '+version(newest)+' • '+asset.name);
+   }
+   if(!overlay.hidden)renderArchive();
+ }).catch(function(err){
+    older=archivedDrive.slice();
+    showNoCurrentRelease('Nowa wersja jest przygotowana, ale nie ma jeszcze EXE. Poprzednie wydania znajdziesz w archiwum. GitHub Releases: '+err.message);
     if(!overlay.hidden)renderArchive();
-  }).catch(function(err){
-    setText('version-tag','v1.4 • Christmas Edition');
-    var button=document.getElementById('download');
-    button.href=fallback;button.target='_blank';button.textContent='⬇ Download BTBlocks v1.4 EXE';
-    setText('download-status','BTBlocks v1.4 is available on Google Drive. Could not check GitHub Releases ('+err.message+').');
-    releases=archivedDrive.slice();older=archivedDrive.slice(1);if(!overlay.hidden)renderArchive();
-  });
+ });
 }
 loadReleases();
 })();
