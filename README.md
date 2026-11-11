@@ -20,6 +20,14 @@ Wydanie udostępnione na Google Drive na podstawie instalatora dostarczonego prz
 
 Przygotowano prywatny BuildKit z nowym wspólnym silnikiem dźwięku, osobnymi ustawieniami efektów gry i interfejsu, zapamiętywaniem nicku, przyciskiem wylogowania, lokalnymi rekordami, animowanym menu, sześcioma nowymi paletami i zestawami skinów. **Nie jest to jeszcze publiczny instalator EXE — wymaga kompilacji i testów.**
 
+## ⚠️ Uwaga o skrótach starszych instalatorów
+
+W starszych EXE (v1.4 i v1.5) skróty na pulpicie mogły mieć tę samą nazwę **BTBlocks** i wskazywać ten sam katalog instalacyjny. Instalacja nowszej wersji mogła więc zastąpić pliki starszej, przez co skrót v1.4 otwierał v1.5. **Wersje EXE w archiwum są oryginalnymi, nieprzebudowanymi instalatorami.** Nie zmieniliśmy ich zawartości.
+
+Przygotowano poprawione prywatne BuildKity v1.4 Original, v1.4 Tile Maze, v1.5 oraz v1.6, z unikalnymi nazwami skrótów, osobnymi katalogami i identyfikatorami instalacji. Trzeba z nich ponownie skompilować i przetestować EXE przed podmienieniem publicznych plików. Nie usuwać plików z katalogu poprzedniej instalacji bez kopii danych.
+
+**Rozwijana wersja: v1.6 Christmas Edition — Audio & UI Update.** Zaplanowane: działające dźwięki w minigrach i interfejsie, przełączniki audio, profile nicków i rekordów, nowy interfejs, animacje oraz skiny. Status: prywatny BuildKit przygotowany; EXE oczekuje na kompilację i testy.
+
 ## 📁 Poprzednie wersje (EXE)
 
 - **[v1.4 Christmas + Kafelkowy Labirynt](https://drive.google.com/file/d/1LEDSQbtDgdGUWsGZfwFnYnSY4MFmMmK-/view?usp=drivesdk)**
