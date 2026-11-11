@@ -2,13 +2,19 @@
 
 **BTBlocks v1.3** is the current publicly shared version of the game. It is an indie project developed with AI assistance and shaped by community feedback.
 
+## 🌐 BTBlocks website
+
+**[Open the Windows 7 Aero download center](https://czekoladawedel55.github.io/Games-For-Everyone-/)** *(available after GitHub Pages is enabled and the deployment succeeds)*.
+
+The site automatically reads public GitHub Releases: the latest published Windows EXE appears on the main button, while older release EXEs appear in a Windows Explorer-style archive window. Until a verified GitHub EXE exists, the button points to the existing Google Drive download folder.
+
 ## 🎮 Download BTBlocks v1.3
 
 **[📥 Open the BTBlocks v1.3 download folder (Google Drive)](https://drive.google.com/drive/folders/1IukMN2PovLvg3zymgEAW9egRLSLlzWeU?usp=drive_link)**
 
 The Google Drive folder above was shared by the project owner for downloads. The installer inside the folder has **not been independently verified from this repository**; check the filename and version before installing.
 
-**Source protection:** Game source files are no longer hosted on the public branch. Automated Windows builds are paused until a private source repository and secure publishing workflow are configured.
+**Source protection:** The game source is not hosted on the current public branch. The Aero website has separate public HTML/CSS/JavaScript (website code only, not game code). The Windows build workflow remains paused until a private source repository and secure publishing workflow are configured.
 
 ## ✨ What's in v1.3?
 
