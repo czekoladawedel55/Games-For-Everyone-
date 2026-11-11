@@ -82,13 +82,13 @@ body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:
       <div>
         <div class="eyebrow">Welcome to BTBlocks</div>
         <h1>Play. Build.<br><span>Have fun.</span></h1>
-        <p class="desc">A growing collection of mini-games with nostalgic themes, made for everyone. Download the newest Windows version and open the Aero Explorer to browse previous releases. GitHub Releases update automatically.</p>
-        <div class="tags"><span class="tag">🎮 Mini-games</span><span class="tag">🪟 Aero vibes</span><span class="tag">🌐 Multiplayer experiments</span><span class="tag" id="version-tag">v1.5 • Inspiron Tribute w przygotowaniu</span></div>
+        <p class="desc">Następne wydanie: BTBlocks v1.4 Christmas Edition z Kafelkowym Labiryntem. Później v1.5 z misją pożegnalną Inspirona 620. Starsze instalatory są w eksploratorze wersji.</p>
+        <div class="tags"><span class="tag">🎮 Mini-games</span><span class="tag">🪟 Aero vibes</span><span class="tag">🌐 Multiplayer experiments</span><span class="tag" id="version-tag">v1.4 Christmas • Kafelkowy Labirynt</span></div>
         <div class="actions">
-          <a class="primary" id="download" aria-disabled="true">⏳ BTBlocks v1.5 Christmas — w przygotowaniu</a>
+          <a class="primary" id="download" aria-disabled="true">⏳ BTBlocks v1.4 Christmas + Labirynt — EXE w przygotowaniu</a>
           <button class="secondary" type="button" id="archive-btn">📁 Previous versions</button>
         </div>
-        <div class="status" id="download-status" role="status" aria-live="polite">Poprzednie EXE są w archiwum. Nowa v1.5 z misją Inspirona czeka na kompilację i testy.</div>
+        <div class="status" id="download-status" role="status" aria-live="polite">BTBlocks v1.4 Christmas Edition z Kafelkowym Labiryntem będzie kolejnym wydaniem. EXE czeka na kompilację i testy. v1.5 z pożegnaniem Inspirona 620 pojawi się później.</div>
       </div>
       <div class="hero-art" role="img" aria-label="BTBlocks colorful 3D-style blocks"><div class="sun"></div><div class="blocks"><div class="block">B</div><div class="block">T</div><div class="block">★</div></div></div>
     </div>
@@ -98,7 +98,7 @@ body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:
   <section class="panel"><h2>🕹️ What's inside?</h2><div class="bullet-row">🎯 <span>Arcade challenges and classic mini-games</span></div><div class="bullet-row">🎨 <span>Windows 7, XP, DOS and Mac-inspired themes</span></div><div class="bullet-row">🌍 <span>Multiple languages and more updates planned</span></div><div class="bullet-row">🛠️ <span>Built with community suggestions</span></div></section>
   <section class="panel"><h2>💻 Windows compatibility</h2><p>Installer target: Windows 7, 8, 8.1, 10 and 11 (64-bit). Some versions and features still require testing. The current Electron-based installer does not support Windows XP or Vista.</p><p style="margin-top:14px">📣 <a href="https://github.com/czekoladawedel55/Games-For-Everyone-/issues" target="_blank" rel="noopener noreferrer">Found a bug? Open an issue on GitHub</a></p><p style="margin-top:12px">🔐 The public site contains release information, not the game's private HTML source code.</p></section>
 </div>
-<div class="footer">BTBlocks • Games for Everyone • AI-assisted indie development • Not affiliated with Microsoft</div>
+<div class="footer">🎄 Kolejność wydań: v1.4 Christmas + Kafelkowy Labirynt → v1.5 Inspiron 620 Tribute<br>BTBlocks • Games for Everyone • AI-assisted indie development • Not affiliated with Microsoft</div>
 </main>
 <div class="taskbar"><button class="start" type="button" id="start-btn">◉ Start</button><button class="task-open" type="button" id="task-explorer">📁 Releases</button><div class="task-clock" id="clock" aria-label="Clock"></div></div>
 <div class="overlay" id="archive-overlay" hidden>
@@ -154,13 +154,13 @@ function updateClock(){var d=new Date();setText('clock',d.toLocaleTimeString([],
 updateClock();setInterval(updateClock,30000);
 function showNoCurrentRelease(msg){
  var button=document.getElementById('download');
- button.removeAttribute('href');button.removeAttribute('target');button.textContent='⏳ BTBlocks v1.5 Christmas — w przygotowaniu';
+ button.removeAttribute('href');button.removeAttribute('target');button.textContent='⏳ BTBlocks v1.4 Christmas + Labirynt — EXE w przygotowaniu';
  button.setAttribute('aria-disabled','true');
- setText('version-tag','v1.5 • Inspiron Tribute w przygotowaniu');
+ setText('version-tag','v1.4 Christmas • Kafelkowy Labirynt');
  setText('download-status',msg);
 }
 function loadReleases(){
- showNoCurrentRelease('Nowa edycja v1.5 z Kafelkowym Labiryntem i misją Inspirona 620 jest przygotowana, ale instalator EXE nie został jeszcze zbudowany. Poprzednie wydania pobierzesz w archiwum.');
+ showNoCurrentRelease('Najpierw wydamy v1.4 Christmas Edition z Kafelkowym Labiryntem. Instalator EXE nie został jeszcze zbudowany. Następna będzie v1.5 z pożegnaniem Inspirona 620. Starsze EXE pobierzesz w archiwum.');
  older=archivedDrive.slice();
  if(!overlay.hidden)renderArchive();
  fetch(api,{headers:{Accept:'application/vnd.github+json'}}).then(function(response){if(!response.ok)throw Error('GitHub API status '+response.status);return response.json();}).then(function(data){
@@ -175,7 +175,7 @@ function loadReleases(){
    if(!overlay.hidden)renderArchive();
  }).catch(function(err){
     older=archivedDrive.slice();
-    showNoCurrentRelease('Nowa v1.5 jest przygotowana, ale nie ma jeszcze EXE. Poprzednie wydania znajdziesz w archiwum. GitHub Releases: '+err.message);
+    showNoCurrentRelease('v1.4 Christmas z labiryntem oczekuje na instalator EXE; v1.5 Inspiron Tribute będzie po niej. Starsze wersje są w archiwum. GitHub Releases: '+err.message);
     if(!overlay.hidden)renderArchive();
  });
 }
