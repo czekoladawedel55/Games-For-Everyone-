@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1378c8">
+<meta name="description" content="BTBlocks — free mini-games. Download the latest Windows release and browse previous versions.">
+<title>BTBlocks — Download Center</title>
+<style>
+:root{color-scheme:light;--navy:#143857;--blue:#167cce;--line:rgba(255,255,255,.7);--font:'Segoe UI',Tahoma,Arial,sans-serif}
+*{box-sizing:border-box}html{min-height:100%}body{margin:0;min-height:100vh;font-family:var(--font);color:#19364b;background:#2878b6;overflow-x:hidden}
+body:before{content:'';position:fixed;inset:0;z-index:-3;background:radial-gradient(ellipse at 28% -8%,#c6f9ff 0%,#70cae9 23%,transparent 57%),radial-gradient(ellipse at 85% 76%,#62d18a 0%,#2ea15d 23%,transparent 55%),linear-gradient(155deg,#3f9fda 12%,#1666bb 45%,#063c89 100%)}
+body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:49vh;z-index:-2;border-radius:50% 50% 0 0;background:linear-gradient(165deg,#9af7a8 0%,#52c975 32%,#1b9957 70%,#0d6e5d);transform:rotate(-4deg);box-shadow:0 -8px 70px rgba(255,255,255,.25)}
+.wallpaper-light{position:fixed;z-index:-1;pointer-events:none;width:65vw;height:50vh;left:10vw;top:24vh;border-radius:50%;background:radial-gradient(ellipse,rgba(255,255,255,.19),transparent 67%);filter:blur(24px)}
+.topbar{height:51px;background:linear-gradient(rgba(255,255,255,.4),rgba(214,237,252,.23));border-bottom:1px solid rgba(255,255,255,.63);box-shadow:0 1px 4px #164d7a44;backdrop-filter:blur(18px)}
+.topbar-inner{max-width:1160px;height:100%;margin:auto;padding:0 22px;display:flex;align-items:center;gap:12px}
+.bt-logo{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(145deg,#42e5ff,#1279e1 62%,#1452b2);border:1px solid #d8ffff;box-shadow:inset 0 2px 5px #ffffffaa,0 2px 6px #06487580;color:white;font-weight:900;letter-spacing:-2px;font-size:18px;transform:rotate(-5deg)}
+.brand{font-weight:800;font-size:18px;color:#fff;text-shadow:0 1px 3px #155687}.brand small{font-size:10px;letter-spacing:1.5px;display:block;font-weight:700;opacity:.95}
+.header-spacer{flex:1}.header-link{font-size:12px;color:white;text-decoration:none;text-shadow:0 1px 2px #0a417a;padding:8px 10px;border-radius:6px}.header-link:hover{background:#ffffff42}
+.shell{max-width:1160px;margin:32px auto 100px;padding:0 22px}
+.window{border-radius:10px 10px 7px 7px;background:rgba(227,246,255,.53);border:1px solid rgba(255,255,255,.92);box-shadow:0 14px 45px rgba(0,33,77,.3),inset 0 1px 0 white;backdrop-filter:blur(24px);overflow:hidden}
+.window-titlebar{height:44px;background:linear-gradient(#ffffff83,#c3eaff3d);display:flex;align-items:center;gap:10px;padding:0 12px;border-bottom:1px solid #ffffffa8}
+.window-icon{font-size:20px}.window-title{font-size:13px;font-weight:700;color:#164a70;text-shadow:0 1px white}.window-buttons{margin-left:auto;display:flex;gap:3px}
+.win-control{width:31px;height:20px;display:grid;place-items:center;color:#27465d;border:1px solid #fff9;box-shadow:inset 0 1px 2px #fff9;border-radius:0 0 4px 4px;background:linear-gradient(#f5fcff,#a8cce5);font-size:12px}
+.win-control.close{background:linear-gradient(#ffb7a9,#dd4c39);color:#fff;text-shadow:0 1px #79312c}
+.main-inside{background:linear-gradient(160deg,rgba(255,255,255,.95),rgba(235,247,255,.91));border:1px solid rgba(255,255,255,.92);margin:7px;border-radius:4px}
+.hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(250px,.65fr);gap:28px;padding:36px 35px}
+.eyebrow{color:#1672bb;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(34px,5.2vw,58px);letter-spacing:-2.8px;line-height:1.03;margin:9px 0 12px;color:#134b81;text-shadow:0 1px white}.hero h1 span{color:#32a5e8}
+.desc{color:#5a7488;line-height:1.65;font-size:14px;max-width:560px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 25px}.tag{font-size:11px;font-weight:700;color:#2a688c;background:#dceefa;border:1px solid #b9d6ec;border-radius:15px;padding:6px 10px}
+.primary{border:1px solid #18649f;border-radius:6px;padding:14px 21px;background:linear-gradient(#62c8ff,#1387d9 44%,#0968be 46%,#167aca);color:white;text-shadow:0 -1px #12548f;box-shadow:inset 0 1px #b5f0ff,0 3px 8px #075ca83b;font:700 15px var(--font);display:inline-flex;align-items:center;gap:10px;cursor:pointer;text-decoration:none;max-width:100%}
+.primary:hover{filter:brightness(1.09)}.primary[aria-disabled=true]{filter:grayscale(.7);cursor:not-allowed;opacity:.6}
+.secondary{border:1px solid #91adc0;border-radius:5px;padding:11px 16px;background:linear-gradient(#fff,#d8e9f6);color:#18517c;box-shadow:inset 0 1px #fff;font:700 13px var(--font);cursor:pointer}
+.secondary:hover{background:linear-gradient(#fff,#c5e2fb)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.status{font-size:12px;line-height:1.5;color:#59768a;margin-top:14px;min-height:20px}
+.status strong{color:#236fa5}
+.hero-art{border:1px solid #a9d0ed;position:relative;min-height:245px;border-radius:9px;background:linear-gradient(145deg,#c9f2ff,#68b9ef 55%,#348ddd);overflow:hidden;box-shadow:inset 0 0 25px #ffffffb9,0 3px 8px #3d82aa30}
+.hero-art:after{content:'';position:absolute;bottom:-40px;left:-25px;right:-25px;height:145px;background:linear-gradient(165deg,#83e997,#31a36e);border-radius:50%;transform:rotate(-10deg)}
+.sun{width:115px;height:115px;border-radius:50%;background:radial-gradient(circle,#fff,#f4ffbb 40%,#fdffff12 70%);position:absolute;right:15px;top:12px;filter:blur(1px)}
+.blocks{position:absolute;inset:0;z-index:1;display:flex;align-items:center;justify-content:center;gap:10px;transform:rotate(-12deg)}.block{width:71px;height:71px;border-radius:12px;border:2px solid #d3ffff;background:linear-gradient(145deg,#b9fffa,#06b7de 48%,#1460bd);color:white;display:grid;place-items:center;font-size:37px;font-weight:900;text-shadow:0 3px #0c68a1;box-shadow:8px 10px 0 #0c52958c,inset 0 3px #ffffffbd}
+.block:nth-child(2){background:linear-gradient(145deg,#c5ff7f,#52c776 50%,#087e5d);transform:translateY(-30px)}
+.block:nth-child(3){background:linear-gradient(145deg,#ffe99f,#ffab3c 55%,#db6d26);transform:translateY(12px)}
+.sections{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.panel{padding:21px 22px;border-radius:7px;border:1px solid #fff9;background:linear-gradient(145deg,#ffffffed,#e4f3ffef);box-shadow:0 8px 25px #083f783b}
+.panel h2{font-size:17px;margin:0 0 12px;color:#1b5a89;display:flex;align-items:center;gap:9px}
+.panel p{font-size:12px;color:#607c90;line-height:1.75;margin:0}.bullet-row{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid #cbdfea;font-size:12px;color:#385f78}.bullet-row:last-child{border:0}
+.footer{margin-top:22px;text-align:center;color:#fff;font-size:11px;text-shadow:0 1px 3px #165386}
+.taskbar{position:fixed;z-index:30;bottom:0;left:0;right:0;height:46px;background:linear-gradient(#d8f3ff99,#4e9fdbad 42%,#0754a9ce);border-top:1px solid #ffffffdd;box-shadow:0 -4px 17px #06467c45;display:flex;align-items:center;gap:11px;padding:0 max(15px,calc((100vw - 1125px)/2))}
+.start{border:1px solid #aaf4cd;background:linear-gradient(#8bf2a4,#219a52 46%,#08753e 51%,#36b66a);color:white;border-radius:24px;padding:7px 19px;font-weight:800;font-style:italic;text-shadow:0 1px #146c41;box-shadow:inset 0 1px #fff;cursor:pointer}
+.task-open{background:#ffffff4b;border:1px solid #e2f7ffad;border-radius:5px;color:#fff;padding:8px 16px;font:700 12px var(--font);cursor:pointer}
+.task-clock{margin-left:auto;color:#fff;font-size:11px;text-shadow:0 1px #154c7c;text-align:center;font-weight:600}
+.overlay{position:fixed;z-index:40;inset:0;background:rgba(3,29,61,.49);display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(3px)}
+.overlay[hidden]{display:none}.explorer{width:min(900px,100%);max-height:min(680px,90vh);display:flex;flex-direction:column}
+.explorer-top{display:flex;gap:7px;padding:8px;background:#eff8ff;border-bottom:1px solid #a4c3db;align-items:center}
+.nav-arrow{font-size:18px;background:linear-gradient(#fff,#c8e1ef);border:1px solid #9dbed3;border-radius:50%;width:28px;height:28px;color:#32729a}
+.breadcrumbs{background:#fff;border:1px solid #a8bed2;min-width:0;flex:1;padding:7px 10px;font-size:12px;color:#2c648e;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.searchbox{width:155px;border:1px solid #a8bed2;background:white;padding:8px;font:12px var(--font);border-radius:3px}
+.explorer-body{display:flex;min-height:270px;max-height:420px;background:#fff}
+.explorer-side{width:185px;background:linear-gradient(#f0f8ff,#dfeafa);padding:16px 12px;border-right:1px solid #cee1ee;color:#316c98;font-size:12px}
+.explorer-side div{padding:8px 6px}.explorer-side .selected{background:#cfecff;border-radius:4px;font-weight:700}
+.files{overflow-y:auto;flex:1;padding:12px 15px}.file-row{display:grid;grid-template-columns:34px minmax(0,1fr) 110px 90px;align-items:center;gap:8px;padding:11px 7px;border-bottom:1px solid #ecf2f7;font-size:12px;color:#2d5b78}
+.file-row:hover{background:#e6f4ff}.file-name{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.file-date{color:#7c97aa;font-size:11px}.file-download{color:#116cbb;text-decoration:none;font-weight:700}.file-download:hover{text-decoration:underline}
+.empty{padding:34px 15px;text-align:center;color:#718ca0;font-size:13px;line-height:1.7}
+.explorer-status{background:#e9f2f9;padding:8px 12px;border-top:1px solid #c6daeb;font-size:11px;color:#527c9a}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding:24px 19px}.hero-art{min-height:185px}.sections{grid-template-columns:1fr}.shell{margin-top:17px}.header-link{padding:5px}.explorer-side{display:none}.file-row{grid-template-columns:30px minmax(0,1fr) 65px}.file-date{display:none}.searchbox{width:105px}}
+@media(prefers-reduced-motion:no-preference){.window,.panel{animation:pop .4s ease both}@keyframes pop{from{opacity:.25;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}}
+</style>
+</head>
+<body>
+<div class="wallpaper-light" aria-hidden="true"></div>
+<header class="topbar"><div class="topbar-inner">
+  <div class="bt-logo" aria-hidden="true">BT</div><div class="brand">BTBlocks<small>GAMES FOR EVERYONE</small></div><div class="header-spacer"></div>
+  <a class="header-link" href="https://github.com/czekoladawedel55/Games-For-Everyone-" target="_blank" rel="noopener noreferrer">⌘ GitHub</a>
+  <a class="header-link" href="https://github.com/czekoladawedel55/Games-For-Everyone-/issues" target="_blank" rel="noopener noreferrer">✉ Feedback</a>
+</div></header>
+<main class="shell">
+<div class="window">
+  <div class="window-titlebar"><span class="window-icon" aria-hidden="true">🧱</span><span class="window-title">BTBlocks — Game Download Center</span><div class="window-buttons" aria-hidden="true"><span class="win-control">—</span><span class="win-control">□</span><span class="win-control close">×</span></div></div>
+  <div class="main-inside">
+    <div class="hero">
+      <div>
+        <div class="eyebrow">Welcome to BTBlocks</div>
+        <h1>Play. Build.<br><span>Have fun.</span></h1>
+        <p class="desc">A growing collection of mini-games with nostalgic themes, made for everyone. The newest Windows version appears here automatically when a verified GitHub Release is published.</p>
+        <div class="tags"><span class="tag">🎮 Mini-games</span><span class="tag">🪟 Aero vibes</span><span class="tag">🌐 Multiplayer experiments</span><span class="tag" id="version-tag">Checking versions…</span></div>
+        <div class="actions">
+          <a class="primary" id="download" href="https://drive.google.com/drive/folders/1IukMN2PovLvg3zymgEAW9egRLSLlzWeU?usp=drive_link" target="_blank" rel="noopener noreferrer">⬇ Open download folder</a>
+          <button class="secondary" type="button" id="archive-btn">📁 Previous versions</button>
+        </div>
+        <div class="status" id="download-status" role="status" aria-live="polite">Checking GitHub Releases for the latest downloadable EXE…</div>
+      </div>
+      <div class="hero-art" role="img" aria-label="BTBlocks colorful 3D-style blocks"><div class="sun"></div><div class="blocks"><div class="block">B</div><div class="block">T</div><div class="block">★</div></div></div>
+    </div>
+  </div>
+</div>
+<div class="sections">
+  <section class="panel"><h2>🕹️ What's inside?</h2><div class="bullet-row">🎯 <span>Arcade challenges and classic mini-games</span></div><div class="bullet-row">🎨 <span>Windows 7, XP, DOS and Mac-inspired themes</span></div><div class="bullet-row">🌍 <span>Multiple languages and more updates planned</span></div><div class="bullet-row">🛠️ <span>Built with community suggestions</span></div></section>
+  <section class="panel"><h2>💻 Windows compatibility</h2><p>Installer target: Windows 7, 8, 8.1, 10 and 11 (64-bit). Some versions and features still require testing. The current Electron-based installer does not support Windows XP or Vista.</p><p style="margin-top:14px">📣 <a href="https://github.com/czekoladawedel55/Games-For-Everyone-/issues" target="_blank" rel="noopener noreferrer">Found a bug? Open an issue on GitHub</a></p><p style="margin-top:12px">🔐 The public site contains release information, not the game's private HTML source code.</p></section>
+</div>
+<div class="footer">BTBlocks • Games for Everyone • AI-assisted indie development • Not affiliated with Microsoft</div>
+</main>
+<div class="taskbar"><button class="start" type="button" id="start-btn">◉ Start</button><button class="task-open" type="button" id="task-explorer">📁 Releases</button><div class="task-clock" id="clock" aria-label="Clock"></div></div>
+<div class="overlay" id="archive-overlay" hidden>
+  <div class="window explorer" role="dialog" aria-modal="true" aria-labelledby="archive-title" tabindex="-1" id="archive-window">
+    <div class="window-titlebar"><span class="window-icon">📁</span><span class="window-title" id="archive-title">BTBlocks Explorer — Previous versions</span><div class="window-buttons"><button class="win-control close" id="close-explorer" aria-label="Close previous versions" style="cursor:pointer">×</button></div></div>
+    <div class="explorer-top"><button class="nav-arrow" aria-label="Back" id="back-button">‹</button><div class="breadcrumbs">💻 Computer ❯ BTBlocks ❯ Archive</div><input id="search-versions" class="searchbox" type="search" placeholder="Search versions..." aria-label="Search versions"></div>
+    <div class="explorer-body"><aside class="explorer-side"><div>⭐ Favorites</div><div class="selected">📁 Previous versions</div><div>💻 BTBlocks</div><div>🗂️ Downloads</div></aside><div class="files" id="archive-files"><div class="empty">Loading previous GitHub releases…</div></div></div>
+    <div class="explorer-status" id="archive-status">Archive • GitHub Releases</div>
+  </div>
+</div>
+<script>
+(function(){
+'use strict';
+var owner='czekoladawedel55',repo='Games-For-Everyone-';
+var api='https://api.github.com/repos/'+owner+'/'+repo+'/releases?per_page=100';
+var releases=[],older=[],fallback='https://drive.google.com/drive/folders/1IukMN2PovLvg3zymgEAW9egRLSLlzWeU?usp=drive_link';
+var overlay=document.getElementById('archive-overlay'),search=document.getElementById('search-versions'),files=document.getElementById('archive-files');
+function exeAssets(release){return (release.assets||[]).filter(function(a){return /\.exe$/i.test(a.name||'')&&a.browser_download_url;});}
+function formatDate(d){if(!d)return 'Unknown date';var x=new Date(d);return isNaN(x.getTime())?'Unknown date':x.toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'});}
+function setText(id,txt){document.getElementById(id).textContent=txt;}
+function version(r){return r.tag_name||r.name||'Unnamed release';}
+function renderArchive(){
+  files.textContent='';
+  var q=search.value.toLowerCase().trim();
+  var filtered=older.filter(function(r){return !q||version(r).toLowerCase().includes(q)||(r.assets||[]).some(function(a){return a.name.toLowerCase().includes(q);});});
+  var shown=0;
+  filtered.forEach(function(r){
+    exeAssets(r).forEach(function(asset){
+      var row=document.createElement('div');row.className='file-row';
+      var ico=document.createElement('span');ico.textContent='📦';ico.setAttribute('aria-hidden','true');
+      var name=document.createElement('span');name.className='file-name';name.title=asset.name;name.textContent=version(r)+' — '+asset.name;
+      var date=document.createElement('span');date.className='file-date';date.textContent=formatDate(r.published_at);
+      var link=document.createElement('a');link.className='file-download';link.href=asset.browser_download_url;link.rel='noopener noreferrer';link.textContent='⬇ EXE';
+      row.appendChild(ico);row.appendChild(name);row.appendChild(date);row.appendChild(link);files.appendChild(row);shown++;
+    });
+  });
+  if(!shown){var empty=document.createElement('div');empty.className='empty';empty.textContent=q?'No versions match your search.':'No older EXE releases yet. When v1.4 is published, v1.3 will appear here automatically.';files.appendChild(empty);}
+  setText('archive-status',shown+' old downloadable EXE file(s) • GitHub Releases');
+}
+function show(){overlay.hidden=false;search.value='';renderArchive();document.getElementById('archive-window').focus();}
+function hide(){overlay.hidden=true;document.getElementById('archive-btn').focus();}
+['archive-btn','task-explorer','start-btn'].forEach(function(id){document.getElementById(id).addEventListener('click',show);});
+document.getElementById('close-explorer').addEventListener('click',hide);
+document.getElementById('back-button').addEventListener('click',hide);
+overlay.addEventListener('mousedown',function(e){if(e.target===overlay)hide();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!overlay.hidden)hide();});
+search.addEventListener('input',renderArchive);
+function updateClock(){var d=new Date();setText('clock',d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})+'\n'+d.toLocaleDateString());}
+updateClock();setInterval(updateClock,30000);
+function loadReleases(){
+  fetch(api,{headers:{Accept:'application/vnd.github+json'}}).then(function(response){if(!response.ok)throw Error('GitHub API status '+response.status);return response.json();}).then(function(data){
+    releases=data.filter(function(r){return !r.draft&&!r.prerelease&&exeAssets(r).length>0;}).sort(function(a,b){return new Date(b.published_at||b.created_at)-new Date(a.published_at||a.created_at);});
+    older=releases.slice(1);
+    var button=document.getElementById('download');
+    if(releases.length){
+      var newest=releases[0],asset=exeAssets(newest)[0];
+      button.href=asset.browser_download_url;button.removeAttribute('target');button.textContent='⬇ Download '+version(newest)+' EXE';
+      setText('version-tag','Latest: '+version(newest));
+      setText('download-status','✓ Latest published GitHub Release: '+version(newest)+' • '+asset.name+' • '+formatDate(newest.published_at));
+    }else{
+      button.href=fallback;button.target='_blank';button.textContent='↗ Open BTBlocks download folder';
+      setText('version-tag','v1.3 • Drive download');
+      setText('download-status','No verified GitHub EXE release found yet. You can open the project download folder on Google Drive.');
+    }
+    if(!overlay.hidden)renderArchive();
+  }).catch(function(err){
+    setText('version-tag','v1.3 • Downloads');
+    setText('download-status','GitHub releases could not be loaded ('+err.message+'). Use the Google Drive download folder or try again later.');
+    older=[];if(!overlay.hidden)renderArchive();
+  });
+}
+loadReleases();
+})();
+</script>
+</body>
+</html>
