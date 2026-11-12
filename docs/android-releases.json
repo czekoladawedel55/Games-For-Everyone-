@@ -1,8 +1,16 @@
 {
   "platform": "android",
-  "latest": null,
+  "latest": {
+    "version": "v1.8 Mobile Beta",
+    "filename": "BTBlocks-v1.8-Mobile-Beta-DEBUG.apk",
+    "url": "https://drive.google.com/file/d/1uFqpMHlu6pgi5cIpUGBXxfd4GW_rZ7T7/view?usp=drivesdk",
+    "date": "2026-11-12",
+    "channel": "beta-debug",
+    "build_source": "private GitHub Actions",
+    "sha256": "fd95b6c0adf63419c83af42aab1404a0068cbc8a8ee5b7b214f5d057b7c9e786"
+  },
   "archive": [],
   "current_releases_folder": "https://drive.google.com/drive/folders/17gEckRqCa2WdFG3y2oYN5YuH8UnzPvFN",
   "archive_folder": "https://drive.google.com/drive/folders/18I-5pohGKzwpUes4RskVZASI31dkqB2L",
-  "notes": "Only add an APK after it has been built, tested and uploaded. For latest: {version,filename,url,date}. For archive use array of same objects. The Windows EXE release selection in index.html is independent."
+  "notes": "First public Android Beta is a debug-signed testing build. Keep Windows EXE current release independent. Update and move older Android APKs into the Android archive when a newer tested build is available."
 }
