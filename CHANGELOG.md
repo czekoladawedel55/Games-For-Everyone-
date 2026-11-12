@@ -7,12 +7,21 @@
 - Gry Kafelkowy Labirynt i misja Inspirona zostały usunięte z prototypu; pozostaje pamiątkowy obraz obudowy.
 - **[Pobierz oficjalny instalator EXE v1.7](https://drive.google.com/file/d/1PqT_FkYE3FVnFzqG_HW6cx5eEYW1gaWd/view?usp=drivesdk)**. Plik dostarczony przez autora; pełne testy nie zostały wykonane.
 
-## BTBlocks v1.8 Mobile — wydanie Beta wycofane (12 listopada 2026)
+## BTBlocks v1.8 Mobile Landscape Beta — poprawiona wersja Android (12 listopada 2026)
 
-- Próbny APK został skompilowany, ale test na urządzeniu wykazał poważne błędy skalowania menu i minigier.
-- **APK usunięto z publicznego Google Drive i strony pobierania.** Nie jest wydaniem stabilnym i nie jest dostępny.
-- Przebudowa: tylko orientacja pozioma (landscape) w całej aplikacji, skalowanie do bezpiecznych obszarów ekranu, responsywne menu, poprawione wymiary minigier i ekranowe sterowanie.
-- Kod gry i projekt Android pozostają prywatne. Windows EXE v1.7 nie został zmieniony.
+- **[Pobierz Android APK Landscape Beta DEBUG](https://drive.google.com/file/d/12R-lDWssYpF4j758SLBs0cqRxhtBLu0X/view?usp=drivesdk)**.
+- Orientacja pozioma w całej aplikacji: logowanie, menu, ustawienia i minigry.
+- Zmniejszono karty, nagłówki, przyciski ekranowe, wyniki oraz panele.
+- Pong skaluje boisko do rzeczywistej wysokości i szerokości poziomego ekranu. Usunięto z niego nakładkę przycisków i ozdobne elementy zasłaniające pole gry.
+- Poprawiono polskie instrukcje sterowania oraz opisy poziomów trudności.
+- Przeglądarkowy test Ponga: 640×360, 800×360 i 915×412, bez błędów JavaScript; kompilacja GitHub Actions zakończona sukcesem.
+- **Wydanie testowe (DEBUG)** — testy na prawdziwych telefonach i wydanie podpisane produkcyjnie są nadal potrzebne.
+
+## BTBlocks v1.8 Mobile — poprzednia wadliwa Beta wycofana (12 listopada 2026)
+
+- Poprzedni APK nie mieścił menu i gier na ekranie.
+- Stary plik usunięto z Google Drive i strony; nie dodano go do archiwum.
+- Kod źródłowy Androida pozostaje prywatny. Wydanie Windows v1.7 Enhanced nie zostało zastąpione.
 
 ## v1.6 — Christmas Edition + Inspiron 620 Tribute (wcześniejszy prototyp, nieopublikowany)
 
