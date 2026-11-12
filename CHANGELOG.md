@@ -7,6 +7,17 @@
 - Gry Kafelkowy Labirynt i misja Inspirona zostały usunięte z prototypu; pozostaje pamiątkowy obraz obudowy.
 - **[Pobierz oficjalny instalator EXE v1.7](https://drive.google.com/file/d/1PqT_FkYE3FVnFzqG_HW6cx5eEYW1gaWd/view?usp=drivesdk)**. Plik dostarczony przez autora; pełne testy nie zostały wykonane.
 
+## BTBlocks v1.8 Mobile DevLink Beta — QR dewelopera + Windows PC EXE (12 listopada 2026)
+
+- **[Pobierz Android APK DevLink Beta DEBUG](https://drive.google.com/file/d/1q6vva5mNZfnKZTl0TY4OHsP80WgGzPIq/view?usp=drivesdk)**.
+- Dodano **BTBlocks DevLink** w ustawieniach gry: QR pierwszego parowania, dwuminutowe wyzwania QR i odpowiedź HMAC odczytywaną przez sparowany program Windows.
+- Inny skaner QR bez tajnego klucza nie odblokuje panelu; telefon wymaga wpisania 10-cyfrowej odpowiedzi i ogranicza błędne próby.
+- Dodano panel dewelopera gry: FPS, jakość 3D, czułość kamery, martwa strefa joysticka, ograniczenie animacji, diagnostyka i raport JSON.
+- Przygotowano prywatny EXE do skanowania QR na PC: skaner kamery lub zdjęcia, zaszyfrowany lokalny klucz Windows DPAPI, bez transmisji sieciowej.
+- Zachowano poziome menu, mniejszy interfejs i poprawiony joystick z wersji developerskiej. Wersja Windows EXE v1.7 Enhanced nadal jest osobna.
+- Testy: obie kompilacje GitHub Actions udane; test QR w przeglądarce potwierdził poprawne i błędne odpowiedzi. Brak testów na fizycznym Androidzie i Windows 7.
+- **Wydanie DEBUG Beta**. Poprzednie wadliwe APK nie są dostępne do pobrania.
+
 ## BTBlocks v1.8 Mobile Landscape Beta — poprawiona wersja Android (12 listopada 2026)
 
 - **[Pobierz Android APK Landscape Beta DEBUG](https://drive.google.com/file/d/12R-lDWssYpF4j758SLBs0cqRxhtBLu0X/view?usp=drivesdk)**.
