@@ -10,9 +10,19 @@ Nowa edycja Enhanced: minigry **Orbital Escape**, **Circuit Master** i **Pulse P
 
 Instalator został dostarczony przez autora i opublikowany na Google Drive. **Nie przeprowadzono niezależnego testu działania EXE w Windows ani pełnego audytu jego spakowanej zawartości.**
 
-## 📱 BTBlocks v1.8 Mobile — Android APK (projektowanie)
+## 📱 BTBlocks v1.8 Mobile Beta — testowy APK na Androida
 
-Planowana mobilna edycja z **plikiem APK**, **sterowaniem dotykowym**, joystickiem ekranowym i interfejsem dopasowanym do smartfonów. To jeszcze etap projektowania, bez gotowego APK i daty premiery.
+**[⬇ Pobierz BTBlocks v1.8 Mobile Beta (DEBUG APK)](https://drive.google.com/file/d/1uFqpMHlu6pgi5cIpUGBXxfd4GW_rZ7T7/view?usp=drivesdk)**
+
+Pierwsza publiczna wersja testowa Androida z mobilnym sterowaniem i przełączaniem układu ekranu (menu pionowo, minigry poziomo). Zbudowana automatycznie przez GitHub Actions z prywatnego repozytorium [BTBlocks-Mobile-PRIVATE](https://github.com/czekoladawedel55/BTBlocks-Mobile-PRIVATE). Kod i BuildKit pozostają prywatne.
+
+**Uwaga:** instalator jest podpisany kluczem developerskim DEBUG; nie przeprowadzono jeszcze testów na różnych telefonach ani finalnego podpisywania produkcyjnego. To wersja beta, a nie zweryfikowane wydanie stabilne. Android może ograniczać wymuszanie orientacji na dużych ekranach.
+
+- SHA-256 APK: `fd95b6c0adf63419c83af42aab1404a0068cbc8a8ee5b7b214f5d057b7c9e786`
+- [Folder wydań Android APK](https://drive.google.com/drive/folders/17gEckRqCa2WdFG3y2oYN5YuH8UnzPvFN)
+- [Archiwum starych APK — na razie puste](https://drive.google.com/drive/folders/18I-5pohGKzwpUes4RskVZASI31dkqB2L)
+
+**Windows EXE v1.7 Enhanced pozostaje osobnym najnowszym wydaniem komputerowym.** Android v1.8 nie zastępuje jego przycisku pobierania ani archiwum.
 
 ## ⚠️ Uwaga o skrótach starszych instalatorów
 
