@@ -1,17 +1,17 @@
 {
   "platform": "android",
   "latest": {
-    "version": "v1.8 Mobile Landscape Beta",
-    "filename": "BTBlocks-v1.8-Mobile-Landscape-Beta-DEBUG.apk",
-    "url": "https://drive.google.com/file/d/12R-lDWssYpF4j758SLBs0cqRxhtBLu0X/view?usp=drivesdk",
+    "version": "v1.8 Mobile DevLink Beta",
+    "filename": "BTBlocks-v1.8-Mobile-DevLink-Beta-DEBUG.apk",
+    "url": "https://drive.google.com/file/d/1q6vva5mNZfnKZTl0TY4OHsP80WgGzPIq/view?usp=drivesdk",
     "date": "2026-11-12",
     "channel": "beta-debug",
     "build_source": "private GitHub Actions",
-    "build_run": "43278710836",
-    "sha256": "26a57ed64dd336a5fcf0b30e2545cfcdd213b4ad0d9aa3d38e26ec992c01c130"
+    "build_run": "43286803525",
+    "sha256": "c03c0ee72fc83cae1212787caacc9944f33334de465b6fb943863d9563073b05"
   },
   "archive": [],
   "current_releases_folder": "https://drive.google.com/drive/folders/17gEckRqCa2WdFG3y2oYN5YuH8UnzPvFN",
   "archive_folder": "https://drive.google.com/drive/folders/18I-5pohGKzwpUes4RskVZASI31dkqB2L",
-  "notes": "The original broken v1.8 Beta was deleted permanently and is not in the archive. This newer landscape-only compact Beta passed CI and simulated landscape Pong layout tests, but is not yet verified on real devices. Windows EXE independent."
+  "notes": "New Android DevLink Beta with landscape UI, touch joystick, FPS two-finger controls, and offline QR/HMAC developer pairing. The older Landscape Beta had broken controls and was withdrawn. Windows EXE v1.7 remains the separate current desktop release. Developer PC EXE is private."
 }
