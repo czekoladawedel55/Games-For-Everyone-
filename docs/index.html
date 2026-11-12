@@ -109,10 +109,16 @@ body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:
         </div>
         <div class="status" id="download-status" role="status" aria-live="polite">BTBlocks v1.7 Enhanced jest dostępne do pobrania na Google Drive. Poprzednie wydania znajdziesz w archiwum.</div>
         <div class="status" role="note" style="margin-top:9px;padding:10px 13px;border:1px solid #bbd3e6;background:#f3f9fd;border-radius:7px;color:#305b77"><strong>🛡️ Check for virus</strong> — The developer periodically checks released versions for viruses and reports no threats found in those checks. Independent verification has not been performed; users can also scan the downloaded EXE with their own antivirus.</div>
-        <div class="status" style="border:1px solid #c3dcec;background:#eaf7ff;padding:12px 14px;border-radius:7px;margin-top:15px">
-          <strong>📱 Projektujemy BTBlocks v1.8 Mobile — Android APK</strong>
-          <div style="margin-top:6px">Wersja mobilna z dotykowym joystickiem, przyciskami ekranowymi i interfejsem dostosowanym do telefonów. <strong>Etap: projektowanie.</strong> APK nie jest jeszcze dostępne.</div>
-        </div>
+        <section id="android-release-panel" aria-labelledby="android-heading" class="status" style="border:1px solid #a9d7e8;background:#eaf7ff;padding:14px;border-radius:7px;margin-top:15px">
+          <h2 id="android-heading" style="font-size:17px;margin:0 0 7px">📱 BTBlocks Android — Mobile APK</h2>
+          <p style="margin:0 0 12px;font-size:13px">BTBlocks v1.8 Mobile: sterowanie dotykowe i interfejs na telefony. Wersje na Androida mają osobne pobieranie i archiwum; nie zastępują wydania Windows EXE.</p>
+          <div class="actions">
+            <button class="primary" type="button" id="apk-download" disabled aria-disabled="true">⬇ Pobierz APK — Coming soon (v1.8)</button>
+            <button class="secondary" type="button" id="apk-archive-btn">📁 Archiwum wersji APK</button>
+          </div>
+          <div id="apk-release-status" role="status" aria-live="polite" style="font-size:12px;margin-top:9px">Android v1.8 Mobile jest w przygotowaniu. Nie ma jeszcze opublikowanego APK.</div>
+          <div style="font-size:12px;margin-top:7px"><a href="https://drive.google.com/drive/folders/17gEckRqCa2WdFG3y2oYN5YuH8UnzPvFN" target="_blank" rel="noopener noreferrer">📂 Google Drive — wydania Android APK</a></div>
+        </section>
         <div class="status" style="border:1px solid #b5d9ba;background:#edf9f0;padding:12px 14px;border-radius:7px;margin-top:10px">
           <strong>🚀 BTBlocks v1.7 Enhanced — wydanie opublikowane!</strong>
           <div style="margin-top:6px">Nowa edycja Enhanced: Orbital Escape, Circuit Master, Pulse Perfect i odświeżony interfejs. <strong>Instalator Windows EXE jest dostępny do pobrania.</strong> Funkcje wymagają testów na docelowych komputerach.</div>
@@ -150,6 +156,14 @@ body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:
     <div class="explorer-top"><button class="nav-arrow" aria-label="Back" id="back-button">‹</button><div class="breadcrumbs">💻 Computer ❯ BTBlocks ❯ Archive</div><input id="search-versions" class="searchbox" type="search" placeholder="Search versions..." aria-label="Search versions"></div>
     <div class="explorer-body"><aside class="explorer-side"><div>⭐ Favorites</div><div class="selected">📁 Previous versions</div><div>💻 BTBlocks</div><div>🗂️ Downloads</div></aside><div class="files" id="archive-files"><div class="empty">Loading previous GitHub releases…</div></div></div>
     <div class="explorer-status" id="archive-status">Archive • GitHub Releases</div>
+  </div>
+</div>
+<div class="overlay" id="apk-archive-overlay" hidden>
+  <div class="window explorer" role="dialog" aria-modal="true" aria-labelledby="apk-archive-title" tabindex="-1" id="apk-archive-window">
+    <div class="window-titlebar"><span class="window-icon">📱</span><span class="window-title" id="apk-archive-title">BTBlocks Explorer — Archiwum wersji Android APK</span><div class="window-buttons"><button class="win-control close" id="close-apk-explorer" aria-label="Zamknij archiwum APK" style="cursor:pointer">×</button></div></div>
+    <div class="explorer-top"><button class="nav-arrow" aria-label="Wstecz" id="apk-back-button">‹</button><div class="breadcrumbs">📱 Android ❯ BTBlocks ❯ Archive APK</div><input id="search-apk-versions" class="searchbox" type="search" placeholder="Search APK versions..." aria-label="Szukaj wersji APK"></div>
+    <div class="explorer-body"><aside class="explorer-side"><div>📱 Android</div><div class="selected">📁 Old APK versions</div><div>🗂️ Mobile releases</div></aside><div class="files" id="apk-archive-files"><div class="empty">No APK releases yet.</div></div></div>
+    <div class="explorer-status" id="apk-archive-status">Android APK archive • <a href="https://drive.google.com/drive/folders/18I-5pohGKzwpUes4RskVZASI31dkqB2L" target="_blank" rel="noopener noreferrer">Open Google Drive archive</a></div>
   </div>
 </div>
 <script>
@@ -232,6 +246,59 @@ function loadReleases(){
  });
 }
 loadReleases();
+})();
+</script>
+<script>
+(function(){
+'use strict';
+var manifestUrl='android-releases.json';
+var latest=null,archive=[];
+var download=document.getElementById('apk-download');
+var status=document.getElementById('apk-release-status');
+var overlay=document.getElementById('apk-archive-overlay');
+var files=document.getElementById('apk-archive-files');
+var search=document.getElementById('search-apk-versions');
+function validRelease(r){
+ return !!r&&typeof r.version==='string'&&typeof r.filename==='string'&&/\.apk$/i.test(r.filename)&&
+ typeof r.url==='string'&&/^https:\/\/drive\.google\.com\//i.test(r.url);
+}
+function render(){
+ files.textContent='';
+ var q=search.value.toLowerCase().trim();
+ var filtered=archive.filter(function(r){return !q||r.version.toLowerCase().includes(q)||r.filename.toLowerCase().includes(q);});
+ filtered.forEach(function(r){
+  var row=document.createElement('div');row.className='file-row';
+  var ico=document.createElement('span');ico.textContent='📱';
+  var name=document.createElement('span');name.className='file-name';name.textContent='BTBlocks '+r.version+' • '+r.filename;
+  var date=document.createElement('span');date.className='file-date';date.textContent=r.date||'Android';
+  var link=document.createElement('a');link.className='file-download';link.href=r.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='⬇ APK';
+  row.appendChild(ico);row.appendChild(name);row.appendChild(date);row.appendChild(link);files.appendChild(row);
+ });
+ if(!filtered.length){var note=document.createElement('div');note.className='empty';note.textContent=q?'No matching Android versions.':'No older APK versions have been released yet.';files.appendChild(note);}
+ document.getElementById('apk-archive-status').textContent=filtered.length+' archived APK file(s) • Android releases';
+ var driveLink=document.createElement('a');driveLink.href='https://drive.google.com/drive/folders/18I-5pohGKzwpUes4RskVZASI31dkqB2L';driveLink.target='_blank';driveLink.rel='noopener noreferrer';driveLink.textContent=' • Open Google Drive archive';
+ document.getElementById('apk-archive-status').appendChild(driveLink);
+}
+function close(){overlay.hidden=true;document.getElementById('apk-archive-btn').focus();}
+document.getElementById('apk-archive-btn').addEventListener('click',function(){overlay.hidden=false;search.value='';render();document.getElementById('apk-archive-window').focus();});
+document.getElementById('close-apk-explorer').addEventListener('click',close);
+document.getElementById('apk-back-button').addEventListener('click',close);
+overlay.addEventListener('mousedown',function(e){if(e.target===overlay)close();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!overlay.hidden)close();});
+search.addEventListener('input',render);
+download.addEventListener('click',function(){
+ if(validRelease(latest))window.open(latest.url,'_blank','noopener,noreferrer');
+});
+fetch(manifestUrl,{cache:'no-store'}).then(function(response){if(!response.ok)throw Error('Manifest unavailable');return response.json();}).then(function(data){
+ archive=Array.isArray(data.archive)?data.archive.filter(validRelease):[];
+ latest=validRelease(data.latest)?data.latest:null;
+ if(latest){
+  download.disabled=false;download.removeAttribute('aria-disabled');
+  download.textContent='⬇ Pobierz BTBlocks '+latest.version+' — APK';
+  status.textContent='✓ Android: BTBlocks '+latest.version+' jest dostępne do pobrania. Windows EXE pozostaje osobnym wydaniem.';
+ }else{status.textContent='Android v1.8 Mobile jest w przygotowaniu. Nie opublikowano jeszcze pliku APK.';}
+ if(!overlay.hidden)render();
+ }).catch(function(){status.textContent='Android APK: przygotowujemy pierwsze wydanie. Lista mobilnych wersji jest chwilowo niedostępna.';});
 })();
 </script>
 </body>
