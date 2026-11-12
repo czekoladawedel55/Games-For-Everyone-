@@ -101,7 +101,7 @@ body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:
       <div>
         <div class="eyebrow">Free indie Windows mini-games • BTBlocks Enhanced</div>
         <h1>BTBlocks<br><span>Enhanced v1.7</span></h1>
-        <p class="desc">Najnowsza wersja BTBlocks v1.5 Christmas Edition: minigry świąteczne, Kafelkowy Labirynt i misja pożegnalna Inspirona 620. Starsze instalatory pobierzesz w eksploratorze wersji.</p>
+        <p class="desc" id="latest-description">Najnowsza wersja BTBlocks v1.7 Enhanced: nowe minigry Orbital Escape, Circuit Master i Pulse Perfect, odświeżone menu oraz poprawki. Starsze instalatory pobierzesz w eksploratorze wersji.</p>
         <div class="tags"><span class="tag">🎮 Mini-games</span><span class="tag">🪟 Aero vibes</span><span class="tag">🌐 Multiplayer experiments</span><span class="tag" id="version-tag">v1.7 Enhanced • nowa edycja</span></div>
         <div class="actions">
           <a class="primary" id="download" href="https://drive.google.com/file/d/1PqT_FkYE3FVnFzqG_HW6cx5eEYW1gaWd/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">⬇ Pobierz BTBlocks v1.7 Enhanced — EXE</a>
@@ -141,7 +141,7 @@ body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:
 <div class="bullet-row">📦 <span>Docelowo osobny instalator Android APK — obecnie etap projektowania</span></div>
 </section>
 </div>
-<div class="footer">📱 BTBlocks v1.8 Android APK — w projektowaniu · 🚀 BTBlocks v1.7 Enhanced — oficjalnie wydana.<div style="height:5px"></div>🚀 Najnowsza wersja: v1.7 Enhanced · W archiwum: v1.5 Christmas Tribute, v1.4 Tile Maze, v1.4 Original i v1.3<br>BTBlocks • Games for Everyone • AI-assisted indie development • Not affiliated with Microsoft</div>
+<div class="footer">📱 BTBlocks v1.8 Android APK — w projektowaniu · 🚀 BTBlocks v1.7 Enhanced — oficjalnie wydana.<div style="height:5px"></div>🚀 Najnowsza wersja: <span id="footer-latest-version">v1.7 Enhanced</span> · Starsze wydania w archiwum<br>BTBlocks • Games for Everyone • AI-assisted indie development • Not affiliated with Microsoft</div>
 </main>
 <div class="taskbar"><button class="start" type="button" id="start-btn">◉ Start</button><button class="task-open" type="button" id="task-explorer">📁 Releases</button><div class="task-clock" id="clock" aria-label="Clock"></div></div>
 <div class="overlay" id="archive-overlay" hidden>
@@ -203,6 +203,11 @@ function showLatest(r){
  button.href=asset.browser_download_url;button.target='_blank';button.rel='noopener noreferrer';button.removeAttribute('aria-disabled');
  button.textContent='⬇ Pobierz '+version(r)+' — EXE';
  setText('version-tag','Najnowsza: '+version(r));
+ setText('footer-latest-version',version(r));
+ var description=/v1\.7\b/i.test(version(r))
+   ? 'Najnowsza wersja '+version(r)+': nowe minigry Orbital Escape, Circuit Master i Pulse Perfect, odświeżone menu oraz poprawki. Starsze instalatory pobierzesz w eksploratorze wersji.'
+   : 'Najnowsza dostępna wersja '+version(r)+'. Pobierz instalator Windows lub zobacz poprzednie wersje w eksploratorze wydań BTBlocks.';
+ setText('latest-description',description);
  setText('download-status','✓ Dostępna wersja: '+version(r)+' • '+asset.name);
 }
 function number(r){
