@@ -10,19 +10,14 @@ Nowa edycja Enhanced: minigry **Orbital Escape**, **Circuit Master** i **Pulse P
 
 Instalator został dostarczony przez autora i opublikowany na Google Drive. **Nie przeprowadzono niezależnego testu działania EXE w Windows ani pełnego audytu jego spakowanej zawartości.**
 
-## 📱 BTBlocks v1.8 Mobile Beta — testowy APK na Androida
+## 📱 BTBlocks v1.8 Mobile — przebudowa (Android landscape-only)
 
-**[⬇ Pobierz BTBlocks v1.8 Mobile Beta (DEBUG APK)](https://drive.google.com/file/d/1uFqpMHlu6pgi5cIpUGBXxfd4GW_rZ7T7/view?usp=drivesdk)**
+**Wadliwa Beta APK została wycofana z pobierania i usunięta z Google Drive 12 listopada 2026.** Interfejs oraz minigry nie mieściły się na ekranie urządzenia. Nowa wersja zostanie przygotowana wyłącznie w orientacji poziomej (landscape) z przebudowanym skalowaniem interfejsu i sterowaniem dotykowym.
 
-Pierwsza publiczna wersja testowa Androida z mobilnym sterowaniem i przełączaniem układu ekranu (menu pionowo, minigry poziomo). Zbudowana automatycznie przez GitHub Actions z prywatnego repozytorium [BTBlocks-Mobile-PRIVATE](https://github.com/czekoladawedel55/BTBlocks-Mobile-PRIVATE). Kod i BuildKit pozostają prywatne.
+**Obecnie nie ma publicznego APK do pobrania.** Kod źródłowy pozostaje w prywatnym repozytorium Androida. Windows v1.7 Enhanced pozostaje niezależnym, dostępnym wydaniem EXE.
 
-**Uwaga:** instalator jest podpisany kluczem developerskim DEBUG; nie przeprowadzono jeszcze testów na różnych telefonach ani finalnego podpisywania produkcyjnego. To wersja beta, a nie zweryfikowane wydanie stabilne. Android może ograniczać wymuszanie orientacji na dużych ekranach.
-
-- SHA-256 APK: `fd95b6c0adf63419c83af42aab1404a0068cbc8a8ee5b7b214f5d057b7c9e786`
-- [Folder wydań Android APK](https://drive.google.com/drive/folders/17gEckRqCa2WdFG3y2oYN5YuH8UnzPvFN)
-- [Archiwum starych APK — na razie puste](https://drive.google.com/drive/folders/18I-5pohGKzwpUes4RskVZASI31dkqB2L)
-
-**Windows EXE v1.7 Enhanced pozostaje osobnym najnowszym wydaniem komputerowym.** Android v1.8 nie zastępuje jego przycisku pobierania ani archiwum.
+- [Folder wydań Android APK — pusty do czasu poprawionego wydania](https://drive.google.com/drive/folders/17gEckRqCa2WdFG3y2oYN5YuH8UnzPvFN)
+- [Archiwum starych APK — brak wydań](https://drive.google.com/drive/folders/18I-5pohGKzwpUes4RskVZASI31dkqB2L)
 
 ## ⚠️ Uwaga o skrótach starszych instalatorów
 
