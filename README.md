@@ -10,14 +10,20 @@ Nowa edycja Enhanced: minigry **Orbital Escape**, **Circuit Master** i **Pulse P
 
 Instalator został dostarczony przez autora i opublikowany na Google Drive. **Nie przeprowadzono niezależnego testu działania EXE w Windows ani pełnego audytu jego spakowanej zawartości.**
 
-## 📱 BTBlocks v1.8 Mobile — przebudowa (Android landscape-only)
+## 📱 BTBlocks v1.8 Mobile Landscape Beta — Android APK
 
-**Wadliwa Beta APK została wycofana z pobierania i usunięta z Google Drive 12 listopada 2026.** Interfejs oraz minigry nie mieściły się na ekranie urządzenia. Nowa wersja zostanie przygotowana wyłącznie w orientacji poziomej (landscape) z przebudowanym skalowaniem interfejsu i sterowaniem dotykowym.
+**[⬇ Pobierz poprawioną wersję BTBlocks v1.8 Mobile Landscape Beta (DEBUG APK)](https://drive.google.com/file/d/12R-lDWssYpF4j758SLBs0cqRxhtBLu0X/view?usp=drivesdk)**
 
-**Obecnie nie ma publicznego APK do pobrania.** Kod źródłowy pozostaje w prywatnym repozytorium Androida. Windows v1.7 Enhanced pozostaje niezależnym, dostępnym wydaniem EXE.
+Przeprojektowana wersja Android z menu i minigrami **zawsze poziomo**, wyraźnie mniejszym interfejsem, skalowaniem Ponga według dostępnej wysokości ekranu, poprawionymi instrukcjami sterowania oraz bez świątecznych nakładek zasłaniających rozgrywkę.
 
-- [Folder wydań Android APK — pusty do czasu poprawionego wydania](https://drive.google.com/drive/folders/17gEckRqCa2WdFG3y2oYN5YuH8UnzPvFN)
-- [Archiwum starych APK — brak wydań](https://drive.google.com/drive/folders/18I-5pohGKzwpUes4RskVZASI31dkqB2L)
+- Build GitHub Actions zakończony sukcesem: [workflow 43278710836](https://github.com/czekoladawedel55/BTBlocks-Mobile-PRIVATE/actions/runs/43278710836).
+- Test układu w przeglądarce: 640×360, 800×360, 915×412, Pong mieści się w ekranie.
+- **Beta testowa, podpisana kluczem DEBUG** — brak testów na prawdziwym urządzeniu z Androidem, nie jest to wydanie stabilne.
+- SHA-256 APK: `26a57ed64dd336a5fcf0b30e2545cfcdd213b4ad0d9aa3d38e26ec992c01c130`
+- [Folder publicznych APK Android](https://drive.google.com/drive/folders/17gEckRqCa2WdFG3y2oYN5YuH8UnzPvFN)
+- [Archiwum APK](https://drive.google.com/drive/folders/18I-5pohGKzwpUes4RskVZASI31dkqB2L)
+
+Poprzedni wadliwy plik APK został usunięty z Google Drive i nie znajduje się w archiwum. Kod Androida pozostaje prywatny. Najnowszy Windows EXE nadal: **BTBlocks v1.7 Enhanced**.
 
 ## ⚠️ Uwaga o skrótach starszych instalatorów
 
