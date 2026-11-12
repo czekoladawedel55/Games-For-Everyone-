@@ -1,17 +1,25 @@
 {
   "platform": "android",
   "latest": {
-    "version": "v1.8 Mobile DevLink Beta",
-    "filename": "BTBlocks-v1.8-Mobile-DevLink-Beta-DEBUG.apk",
-    "url": "https://drive.google.com/file/d/1q6vva5mNZfnKZTl0TY4OHsP80WgGzPIq/view?usp=drivesdk",
+    "version": "v1.8 Mobile LS2208 Code128 Beta",
+    "filename": "BTBlocks-v1.8-Mobile-LS2208-Code128-Beta-DEBUG.apk",
+    "url": "https://drive.google.com/file/d/1yPmSEsQ4Asy-eFSoJf4P8CkNZqcMIcNu/view?usp=drivesdk",
     "date": "2026-11-12",
     "channel": "beta-debug",
     "build_source": "private GitHub Actions",
-    "build_run": "43286803525",
-    "sha256": "c03c0ee72fc83cae1212787caacc9944f33334de465b6fb943863d9563073b05"
+    "build_run": "43291448230",
+    "sha256": "c69cf42f08792eab32b7b0ac3f9f73cdeb4d4d4dfadf62993a2ef1c90e8b614c"
   },
-  "archive": [],
+  "archive": [
+    {
+      "version": "v1.8 Mobile DevLink QR Beta",
+      "filename": "BTBlocks-v1.8-Mobile-DevLink-QR-Beta-DEBUG.apk",
+      "url": "https://drive.google.com/file/d/1q6vva5mNZfnKZTl0TY4OHsP80WgGzPIq/view?usp=drivesdk",
+      "date": "2026-11-12",
+      "channel": "beta-debug"
+    }
+  ],
   "current_releases_folder": "https://drive.google.com/drive/folders/17gEckRqCa2WdFG3y2oYN5YuH8UnzPvFN",
   "archive_folder": "https://drive.google.com/drive/folders/18I-5pohGKzwpUes4RskVZASI31dkqB2L",
-  "notes": "New Android DevLink Beta with landscape UI, touch joystick, FPS two-finger controls, and offline QR/HMAC developer pairing. The older Landscape Beta had broken controls and was withdrawn. Windows EXE v1.7 remains the separate current desktop release. Developer PC EXE is private."
+  "notes": "Symbol LS2208 scanner works with printed/possibly screen-displayed Code 128 (1D), not QR. First pairing scans 4 codes, unlock scans 1. USB-HID PC tool private. Older QR-only Beta archived. Code128 reading from an LCD is NOT guaranteed for this laser scanner. Windows EXE v1.7 stays separate."
 }
