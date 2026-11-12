@@ -10,20 +10,24 @@ Nowa edycja Enhanced: minigry **Orbital Escape**, **Circuit Master** i **Pulse P
 
 Instalator został dostarczony przez autora i opublikowany na Google Drive. **Nie przeprowadzono niezależnego testu działania EXE w Windows ani pełnego audytu jego spakowanej zawartości.**
 
-## 📱 BTBlocks v1.8 Mobile Landscape Beta — Android APK
+## 📱 BTBlocks v1.8 Mobile DevLink Beta — Android APK
 
-**[⬇ Pobierz poprawioną wersję BTBlocks v1.8 Mobile Landscape Beta (DEBUG APK)](https://drive.google.com/file/d/12R-lDWssYpF4j758SLBs0cqRxhtBLu0X/view?usp=drivesdk)**
+**[⬇ Pobierz BTBlocks v1.8 Mobile DevLink Beta (DEBUG APK)](https://drive.google.com/file/d/1q6vva5mNZfnKZTl0TY4OHsP80WgGzPIq/view?usp=drivesdk)**
 
-Przeprojektowana wersja Android z menu i minigrami **zawsze poziomo**, wyraźnie mniejszym interfejsem, skalowaniem Ponga według dostępnej wysokości ekranu, poprawionymi instrukcjami sterowania oraz bez świątecznych nakładek zasłaniających rozgrywkę.
+Wersja Android **zawsze poziomo (landscape)**, ze zmniejszonym interfejsem, joystickiem 2D, sterowaniem kamerą dwoma palcami w grach 3D, poprawionymi opisami i polskimi znakami oraz usuniętym zdjęciem Inspirona z rogu.
 
-- Build GitHub Actions zakończony sukcesem: [workflow 43278710836](https://github.com/czekoladawedel55/BTBlocks-Mobile-PRIVATE/actions/runs/43278710836).
-- Test układu w przeglądarce: 640×360, 800×360, 915×412, Pong mieści się w ekranie.
-- **Beta testowa, podpisana kluczem DEBUG** — brak testów na prawdziwym urządzeniu z Androidem, nie jest to wydanie stabilne.
-- SHA-256 APK: `26a57ed64dd336a5fcf0b30e2545cfcdd213b4ad0d9aa3d38e26ec992c01c130`
-- [Folder publicznych APK Android](https://drive.google.com/drive/folders/17gEckRqCa2WdFG3y2oYN5YuH8UnzPvFN)
-- [Archiwum APK](https://drive.google.com/drive/folders/18I-5pohGKzwpUes4RskVZASI31dkqB2L)
+**Nowość: BTBlocks DevLink.** W ustawieniach gry można wygenerować QR pierwszego parowania z zaufanym programem PC oraz krótkotrwały QR wyzwania. Sparowany program PC skanuje kod i wylicza 10-cyfrową odpowiedź, którą trzeba wpisać na Androidzie. Zwykły skaner QR nie może odblokować panelu bez klucza. QR pierwszego parowania zawiera klucz i powinien być pokazywany wyłącznie właścicielowi PC.
 
-Poprzedni wadliwy plik APK został usunięty z Google Drive i nie znajduje się w archiwum. Kod Androida pozostaje prywatny. Najnowszy Windows EXE nadal: **BTBlocks v1.7 Enhanced**.
+Odblokowany panel dewelopera zawiera: diagnostykę gry, licznik FPS, jakość 3D, regulację czułości rozglądania, martwą strefę joysticka, ograniczenie animacji i eksport raportu JSON. Dotyczy **tylko opcji gry**, nie ustawień programisty systemu Android.
+
+- APK: [publiczny folder wydań Android](https://drive.google.com/drive/folders/17gEckRqCa2WdFG3y2oYN5YuH8UnzPvFN)
+- Build GitHub Actions: [udana kompilacja Android APK](https://github.com/czekoladawedel55/BTBlocks-Mobile-PRIVATE/actions/runs/43286803525) (prywatne repo)
+- Test QR/HMAC w symulatorze przeglądarkowym: poprawny kod odblokowuje, błędny jest odrzucany. Bez testów na prawdziwych telefonach.
+- SHA-256 APK: `c03c0ee72fc83cae1212787caacc9944f33334de465b6fb943863d9563073b05`
+- Program Windows DevLink EXE pozostaje prywatnym narzędziem autora gry.
+- **To testowe APK DEBUG**, nie stabilne wydanie produkcyjne. Stare wadliwe APK zostały wycofane i nie są archiwizowane.
+
+Najnowszy Windows EXE pozostaje osobnym wydaniem **BTBlocks v1.7 Enhanced**.
 
 ## ⚠️ Uwaga o skrótach starszych instalatorów
 
