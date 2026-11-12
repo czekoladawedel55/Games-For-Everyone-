@@ -6,17 +6,17 @@
 <meta name="theme-color" content="#1378c8">
 <meta name="description" content="BTBlocks is a free Windows mini-game collection featuring arcade challenges, retro-inspired themes and Enhanced v1.7. Download BTBlocks for Windows and explore past releases.">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="https://czekoladawedel55.github.io/Games-For-Everyone/">
+<link rel="canonical" href="https://czekoladawedel55.github.io/Games-For-Everyone-/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BTBlocks">
 <meta property="og:title" content="BTBlocks — Free Windows Mini-Games | Enhanced v1.7">
 <meta property="og:description" content="Play BTBlocks, a free collection of indie mini-games for Windows with retro themes. Download Enhanced v1.7 and browse the archive.">
-<meta property="og:url" content="https://czekoladawedel55.github.io/Games-For-Everyone/">
+<meta property="og:url" content="https://czekoladawedel55.github.io/Games-For-Everyone-/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BTBlocks — Free Windows Mini-Games">
 <meta name="twitter:description" content="BTBlocks Enhanced v1.7: indie arcade games and retro themes for Windows. Free EXE download.">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"VideoGame","name":"BTBlocks","alternateName":"BTBlocks Enhanced","url":"https://czekoladawedel55.github.io/Games-For-Everyone/","description":"A free indie Windows mini-game collection including Orbital Escape, Circuit Master and Pulse Perfect with retro-inspired themes.","genre":["Arcade","Puzzle","Casual"],"gamePlatform":["Windows 7","Windows 8","Windows 10","Windows 11"],"operatingSystem":"Windows","inLanguage":["en","pl"],"isAccessibleForFree":true,"author":{"@type":"Organization","name":"BTBlocks Games for Everyone"},"offers":{"@type":"Offer","price":"0","priceCurrency":"PLN","url":"https://drive.google.com/file/d/1PqT_FkYE3FVnFzqG_HW6cx5eEYW1gaWd/view?usp=drivesdk"}}
+{"@context":"https://schema.org","@type":"VideoGame","name":"BTBlocks","alternateName":"BTBlocks Enhanced","url":"https://czekoladawedel55.github.io/Games-For-Everyone-/","description":"A free indie Windows mini-game collection including Orbital Escape, Circuit Master and Pulse Perfect with retro-inspired themes.","genre":["Arcade","Puzzle","Casual"],"gamePlatform":["Windows 7","Windows 8","Windows 10","Windows 11"],"operatingSystem":"Windows","inLanguage":["en","pl"],"isAccessibleForFree":true,"author":{"@type":"Organization","name":"BTBlocks Games for Everyone"},"offers":{"@type":"Offer","price":"0","priceCurrency":"PLN","url":"https://drive.google.com/file/d/1PqT_FkYE3FVnFzqG_HW6cx5eEYW1gaWd/view?usp=drivesdk"}}
 </script>
 <title>BTBlocks — Free Windows Mini-Games | Enhanced v1.7 Download</title>
 <style>
@@ -99,9 +99,9 @@ body:after{content:'';position:fixed;left:-10vw;right:-10vw;bottom:-19vh;height:
   <div class="main-inside">
     <div class="hero">
       <div>
-        <div class="eyebrow">Free indie Windows mini-games • BTBlocks Enhanced</div>
-        <h1>BTBlocks<br><span>Enhanced v1.7</span></h1>
-        <p class="desc" id="latest-description">Najnowsza wersja BTBlocks v1.7 Enhanced: nowe minigry Orbital Escape, Circuit Master i Pulse Perfect, odświeżone menu oraz poprawki. Starsze instalatory pobierzesz w eksploratorze wersji.</p>
+        <div class="eyebrow">Welcome to BTBlocks</div>
+        <h1>Play. Build.<br><span>Have fun.</span></h1>
+        <p class="desc">A growing collection of mini-games with nostalgic themes, made for everyone. Download the newest Windows version and open the Aero Explorer to browse previous releases. GitHub Releases update automatically.</p>
         <div class="tags"><span class="tag">🎮 Mini-games</span><span class="tag">🪟 Aero vibes</span><span class="tag">🌐 Multiplayer experiments</span><span class="tag" id="version-tag">v1.7 Enhanced • nowa edycja</span></div>
         <div class="actions">
           <a class="primary" id="download" href="https://drive.google.com/file/d/1PqT_FkYE3FVnFzqG_HW6cx5eEYW1gaWd/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">⬇ Pobierz BTBlocks v1.7 Enhanced — EXE</a>
@@ -204,10 +204,6 @@ function showLatest(r){
  button.textContent='⬇ Pobierz '+version(r)+' — EXE';
  setText('version-tag','Najnowsza: '+version(r));
  setText('footer-latest-version',version(r));
- var description=/v1\.7\b/i.test(version(r))
-   ? 'Najnowsza wersja '+version(r)+': nowe minigry Orbital Escape, Circuit Master i Pulse Perfect, odświeżone menu oraz poprawki. Starsze instalatory pobierzesz w eksploratorze wersji.'
-   : 'Najnowsza dostępna wersja '+version(r)+'. Pobierz instalator Windows lub zobacz poprzednie wersje w eksploratorze wydań BTBlocks.';
- setText('latest-description',description);
  setText('download-status','✓ Dostępna wersja: '+version(r)+' • '+asset.name);
 }
 function number(r){
