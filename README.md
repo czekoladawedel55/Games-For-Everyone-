@@ -16,9 +16,15 @@ Wydanie udostępnione na Google Drive na podstawie instalatora dostarczonego prz
 - Rozbrajanie pułapek, wykrywacz, blackout i żółta latarka.
 - **Inspiron 620 Tribute** — pamiątkowe okno Windows 7 i misja odnajdywania trzech fragmentów pamięci komputera.
 
-## 🛠️ W przygotowaniu: BTBlocks v1.6 Christmas Edition — Audio & UI Update
+## 🚀 BTBlocks v1.7 Enhanced — publiczna zapowiedź
 
-Przygotowano prywatny BuildKit z nowym wspólnym silnikiem dźwięku, osobnymi ustawieniami efektów gry i interfejsu, zapamiętywaniem nicku, przyciskiem wylogowania, lokalnymi rekordami, animowanym menu, sześcioma nowymi paletami i zestawami skinów. **Nie jest to jeszcze publiczny instalator EXE — wymaga kompilacji i testów.**
+Projekt **v1.7 Enhanced** nie jest już tajny. Powstaje znacznie rozbudowana wersja z nowymi minigrami **Orbital Escape**, **Circuit Master** i **Pulse Perfect**, ulepszeniami interfejsu, profilami graczy i poprawkami stabilności. Prototyp jest przygotowany; **instalator EXE v1.7 jeszcze nie został skompilowany ani opublikowany**. Dotychczasowy publiczny download nadal prowadzi do v1.5.
+
+Źródła i narzędzia developerskie nie są publicznymi plikami do pobrania. Opublikujemy instalator gry, nie przypadkowo prywatny BuildKit.
+
+## 📱 BTBlocks v1.8 Mobile — Android APK (projektowanie)
+
+Planowana mobilna edycja z **plikiem APK**, **sterowaniem dotykowym**, joystickiem ekranowym i interfejsem dopasowanym do smartfonów. To jeszcze etap projektowania, bez gotowego APK i daty premiery.
 
 ## ⚠️ Uwaga o skrótach starszych instalatorów
 
@@ -26,7 +32,7 @@ W starszych EXE (v1.4 i v1.5) skróty na pulpicie mogły mieć tę samą nazwę 
 
 Przygotowano poprawione prywatne BuildKity v1.4 Original, v1.4 Tile Maze, v1.5 oraz v1.6, z unikalnymi nazwami skrótów, osobnymi katalogami i identyfikatorami instalacji. Trzeba z nich ponownie skompilować i przetestować EXE przed podmienieniem publicznych plików. Nie usuwać plików z katalogu poprzedniej instalacji bez kopii danych.
 
-**Rozwijana wersja: v1.6 Christmas Edition — Audio & UI Update.** Zaplanowane: działające dźwięki w minigrach i interfejsie, przełączniki audio, profile nicków i rekordów, nowy interfejs, animacje oraz skiny. Status: prywatny BuildKit przygotowany; EXE oczekuje na kompilację i testy.
+**Poprawione paczki developerskie dla wcześniejszych wersji są zachowane**, ale publiczne opisy rozwoju dotyczą obecnie v1.7 Enhanced oraz v1.8 Mobile.
 
 ## 📁 Poprzednie wersje (EXE)
 
