@@ -7,6 +7,17 @@
 - Gry Kafelkowy Labirynt i misja Inspirona zostały usunięte z prototypu; pozostaje pamiątkowy obraz obudowy.
 - **[Pobierz oficjalny instalator EXE v1.7](https://drive.google.com/file/d/1PqT_FkYE3FVnFzqG_HW6cx5eEYW1gaWd/view?usp=drivesdk)**. Plik dostarczony przez autora; pełne testy nie zostały wykonane.
 
+## BTBlocks v1.8 Mobile LS2208 Code128 Beta — czytnik kodów 1D (12 listopada 2026)
+
+- **[Pobierz Android APK LS2208 Beta DEBUG](https://drive.google.com/file/d/1yPmSEsQ4Asy-eFSoJf4P8CkNZqcMIcNu/view?usp=drivesdk)**.
+- Android DevLink: generator Code 128 na całym ekranie. Do pierwszego parowania cztery krótkie kody; do każdego kolejnego odblokowania jeden kod 1D.
+- PC DevLink: bezpośredni odczyt ze skanera **Symbol LS2208-SR20007R-UR USB HID** (symuluje klawiaturę), automatyczne rozpoznanie pełnego kodu nawet bez Enter.
+- Zachowano kamerę QR i wczytywanie zdjęcia kodu jako alternatywę; LS2208 **nie odczytuje QR**.
+- Pierwsze parowanie zapisuje tajny klucz w Windows DPAPI; jedno krótkotrwałe wyzwanie HMAC i 10-cyfrowa odpowiedź uruchamiają tylko opcje deweloperskie BTBlocks.
+- Ograniczenie: starszy laser LS2208 **może nie odczytywać kodów z ekranu telefonu**. Wtedy druk Code 128 lub kamerka z QR.
+- Oba buildy GitHub Actions ukończyły się sukcesem, a przykładowe Code 128 zostały odczytane przez dekoder. **Brak jeszcze testu z prawdziwym LS2208 oraz Windows 7/telefonem**.
+- Starsze wydanie Android DevLink QR Beta przeniesiono do archiwum APK. Windows EXE v1.7 Enhanced pozostaje bez zmian.
+
 ## BTBlocks v1.8 Mobile DevLink Beta — QR dewelopera + Windows PC EXE (12 listopada 2026)
 
 - **[Pobierz Android APK DevLink Beta DEBUG](https://drive.google.com/file/d/1q6vva5mNZfnKZTl0TY4OHsP80WgGzPIq/view?usp=drivesdk)**.
