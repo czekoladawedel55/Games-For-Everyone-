@@ -1,8 +1,17 @@
 {
   "platform": "android",
-  "latest": null,
+  "latest": {
+    "version": "v1.8 Mobile Landscape Beta",
+    "filename": "BTBlocks-v1.8-Mobile-Landscape-Beta-DEBUG.apk",
+    "url": "https://drive.google.com/file/d/12R-lDWssYpF4j758SLBs0cqRxhtBLu0X/view?usp=drivesdk",
+    "date": "2026-11-12",
+    "channel": "beta-debug",
+    "build_source": "private GitHub Actions",
+    "build_run": "43278710836",
+    "sha256": "26a57ed64dd336a5fcf0b30e2545cfcdd213b4ad0d9aa3d38e26ec992c01c130"
+  },
   "archive": [],
   "current_releases_folder": "https://drive.google.com/drive/folders/17gEckRqCa2WdFG3y2oYN5YuH8UnzPvFN",
   "archive_folder": "https://drive.google.com/drive/folders/18I-5pohGKzwpUes4RskVZASI31dkqB2L",
-  "notes": "Broken v1.8 Mobile Beta withdrawn and APK deleted on 2026-11-12. Android landscape-only redesign underway. No APK released. Keep Windows EXE release independent."
+  "notes": "The original broken v1.8 Beta was deleted permanently and is not in the archive. This newer landscape-only compact Beta passed CI and simulated landscape Pong layout tests, but is not yet verified on real devices. Windows EXE independent."
 }
