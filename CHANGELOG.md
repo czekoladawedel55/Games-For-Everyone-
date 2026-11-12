@@ -7,11 +7,14 @@
 - Gry Kafelkowy Labirynt i misja Inspirona zostały usunięte z prototypu; pozostaje pamiątkowy obraz obudowy.
 - **[Pobierz oficjalny instalator EXE v1.7](https://drive.google.com/file/d/1PqT_FkYE3FVnFzqG_HW6cx5eEYW1gaWd/view?usp=drivesdk)**. Plik dostarczony przez autora; pełne testy nie zostały wykonane.
 
-## BTBlocks v1.8 Mobile — Android APK (planowana)
+## BTBlocks v1.8 Mobile Beta — pierwszy publiczny Android APK (12 listopada 2026)
 
-- Projekt sterowania dotykowego, wirtualnego joysticka i mobilnego menu.
-- Docelowo oddzielny APK, jeszcze nieopublikowany.
-
+- Przygotowana aplikacja mobilna na bazie prywatnego BTBlocks v1.7 Enhanced.
+- Dodano ekranowe sterowanie i żądanie orientacji pionowej dla menu, poziomej dla minigier.
+- Zbudowano pierwszy APK w prywatnym GitHub Actions (udany build, artefakt zweryfikowany).
+- **[Pobierz APK Beta DEBUG](https://drive.google.com/file/d/1uFqpMHlu6pgi5cIpUGBXxfd4GW_rZ7T7/view?usp=drivesdk)** — wydanie testowe, nieprzetestowane na prawdziwych urządzeniach i bez produkcyjnego podpisu.
+- Rozdzielono archiwa i przyciski Windows EXE oraz Android APK.
+- Prywatny kod źródłowy nie został opublikowany.
 
 ## v1.6 — Christmas Edition + Inspiron 620 Tribute (wcześniejszy prototyp, nieopublikowany)
 
