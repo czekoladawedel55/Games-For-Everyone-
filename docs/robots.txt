@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://czekoladawedel55.github.io/Games-For-Everyone/sitemap.xml
