@@ -1,6 +1,19 @@
-# BTBlocks — historia wydań
+# BTBlocks — historia wydań i zapowiedzi
 
-## v1.6 — Christmas Edition + Inspiron 620 Tribute (prywatna wersja developerska)
+## BTBlocks v1.7 Enhanced — publicznie ujawniony prototyp
+
+- Nowe gry: Orbital Escape, Circuit Master i Pulse Perfect.
+- Prace nad ulepszeniami interfejsu i poprawkami odziedziczonymi po starszych wydaniach.
+- Gry Kafelkowy Labirynt i misja Inspirona zostały usunięte z prototypu; pozostaje pamiątkowy obraz obudowy.
+- **Nie ma jeszcze publicznego instalatora Windows EXE v1.7.** Najnowsza dostępna do pobrania pozostaje v1.5.
+
+## BTBlocks v1.8 Mobile — Android APK (planowana)
+
+- Projekt sterowania dotykowego, wirtualnego joysticka i mobilnego menu.
+- Docelowo oddzielny APK, jeszcze nieopublikowany.
+
+
+## v1.6 — Christmas Edition + Inspiron 620 Tribute (wcześniejszy prototyp, nieopublikowany)
 
 - Silnik efektów Web Audio i dźwięki rozgrywki/interfejsu, osobne przełączniki i regulacja głośności.
 - Zapamiętywanie nicku i możliwość wylogowania oraz zmiany gracza.
