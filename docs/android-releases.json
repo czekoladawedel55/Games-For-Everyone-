@@ -1,0 +1,8 @@
+{
+  "platform": "android",
+  "latest": null,
+  "archive": [],
+  "current_releases_folder": "https://drive.google.com/drive/folders/17gEckRqCa2WdFG3y2oYN5YuH8UnzPvFN",
+  "archive_folder": "https://drive.google.com/drive/folders/18I-5pohGKzwpUes4RskVZASI31dkqB2L",
+  "notes": "Only add an APK after it has been built, tested and uploaded. For latest: {version,filename,url,date}. For archive use array of same objects. The Windows EXE release selection in index.html is independent."
+}
