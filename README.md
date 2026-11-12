@@ -10,24 +10,30 @@ Nowa edycja Enhanced: minigry **Orbital Escape**, **Circuit Master** i **Pulse P
 
 Instalator został dostarczony przez autora i opublikowany na Google Drive. **Nie przeprowadzono niezależnego testu działania EXE w Windows ani pełnego audytu jego spakowanej zawartości.**
 
-## 📱 BTBlocks v1.8 Mobile DevLink Beta — Android APK
+## 📱 BTBlocks v1.8 Mobile LS2208 Code128 Beta — Android APK
 
-**[⬇ Pobierz BTBlocks v1.8 Mobile DevLink Beta (DEBUG APK)](https://drive.google.com/file/d/1q6vva5mNZfnKZTl0TY4OHsP80WgGzPIq/view?usp=drivesdk)**
+**[⬇ Pobierz BTBlocks v1.8 Mobile LS2208 Code128 Beta (DEBUG APK)](https://drive.google.com/file/d/1yPmSEsQ4Asy-eFSoJf4P8CkNZqcMIcNu/view?usp=drivesdk)**
 
-Wersja Android **zawsze poziomo (landscape)**, ze zmniejszonym interfejsem, joystickiem 2D, sterowaniem kamerą dwoma palcami w grach 3D, poprawionymi opisami i polskimi znakami oraz usuniętym zdjęciem Inspirona z rogu.
+Android działa **tylko w poziomie (landscape)**; zawiera mały interfejs, joystick do minigier i sterowanie FPS/Zombie Survival dwoma palcami.
 
-**Nowość: BTBlocks DevLink.** W ustawieniach gry można wygenerować QR pierwszego parowania z zaufanym programem PC oraz krótkotrwały QR wyzwania. Sparowany program PC skanuje kod i wylicza 10-cyfrową odpowiedź, którą trzeba wpisać na Androidzie. Zwykły skaner QR nie może odblokować panelu bez klucza. QR pierwszego parowania zawiera klucz i powinien być pokazywany wyłącznie właścicielowi PC.
+### BTBlocks DevLink — czytnik USB Symbol LS2208
 
-Odblokowany panel dewelopera zawiera: diagnostykę gry, licznik FPS, jakość 3D, regulację czułości rozglądania, martwą strefę joysticka, ograniczenie animacji i eksport raportu JSON. Dotyczy **tylko opcji gry**, nie ustawień programisty systemu Android.
+Nowy PC DevLink wspiera skaner **Symbol LS2208-SR20007R-UR** działający jako klawiatura USB. Model rozpoznaje **Code 128 (1D), ale nie odczytuje QR**. W ustawieniach Androida można wyświetlić duży kod kreskowy na całym ekranie; pierwotne parowanie wymaga zeskanowania **4 części Code 128**, a kolejne odblokowanie — **1 kodu**. Program PC automatycznie przyjmuje odczyty również bez końcowego Enter. QR nadal jest dostępny dla kamery komputera.
 
-- APK: [publiczny folder wydań Android](https://drive.google.com/drive/folders/17gEckRqCa2WdFG3y2oYN5YuH8UnzPvFN)
-- Build GitHub Actions: [udana kompilacja Android APK](https://github.com/czekoladawedel55/BTBlocks-Mobile-PRIVATE/actions/runs/43286803525) (prywatne repo)
-- Test QR/HMAC w symulatorze przeglądarkowym: poprawny kod odblokowuje, błędny jest odrzucany. Bez testów na prawdziwych telefonach.
-- SHA-256 APK: `c03c0ee72fc83cae1212787caacc9944f33334de465b6fb943863d9563073b05`
-- Program Windows DevLink EXE pozostaje prywatnym narzędziem autora gry.
-- **To testowe APK DEBUG**, nie stabilne wydanie produkcyjne. Stare wadliwe APK zostały wycofane i nie są archiwizowane.
+Parowanie wiąże telefon z **tajnym kluczem zapisanym w sparowanym PC**, a nie z numerem seryjnym skanera. Sam odczyt jednorazowego kodu przez obcy skaner nie odblokuje panelu. **Nie udostępniaj czterech kodów pierwszego parowania** — zawierają sekret.
 
-Najnowszy Windows EXE pozostaje osobnym wydaniem **BTBlocks v1.7 Enhanced**.
+**Uwaga sprzętowa:** LS2208 to stary laserowy skaner; odczyt kodów kreskowych **bezpośrednio z wyświetlacza telefonu nie jest gwarantowany**. W razie problemów spróbuj wydruku Code 128 albo pozostawionego trybu QR z kamerą. Kod można też przepisać do programu PC.
+
+Deweloperskie funkcje BTBlocks: FPS, jakość grafiki 3D, czułość kamery, martwa strefa joysticka, ograniczenie animacji, diagnostyka i eksport JSON. Nie są to systemowe opcje programisty Androida.
+
+- [Publiczny folder wydań APK](https://drive.google.com/drive/folders/17gEckRqCa2WdFG3y2oYN5YuH8UnzPvFN)
+- [Archiwum starszych APK (w tym wcześniejszej DevLink QR Beta)](https://drive.google.com/drive/folders/18I-5pohGKzwpUes4RskVZASI31dkqB2L)
+- [Kompilacja Android GitHub Actions](https://github.com/czekoladawedel55/BTBlocks-Mobile-PRIVATE/actions/runs/43291448230) (prywatny projekt)
+- SHA-256 APK: `c69cf42f08792eab32b7b0ac3f9f73cdeb4d4d4dfadf62993a2ef1c90e8b614c`
+- PC EXE pozostaje narzędziem prywatnym. Kompilacja GitHub Actions przeszła pomyślnie.
+- Weryfikacja laboratoryjna: kody Code 128 zostały odczytane przez dekoder; **fizyczny LS2208, Windows 7 i Android nie były jeszcze testowane razem**.
+
+To **testowe APK DEBUG**, nie produkcyjne wydanie stabilne. Windows EXE **BTBlocks v1.7 Enhanced** pozostaje niezależnym wydaniem PC.
 
 ## ⚠️ Uwaga o skrótach starszych instalatorów
 
@@ -35,7 +41,7 @@ W starszych EXE (m.in. v1.4 i v1.5) skróty na pulpicie mogły mieć tę samą n
 
 Przygotowano poprawione prywatne BuildKity v1.4 Original, v1.4 Tile Maze, v1.5 oraz v1.6, z unikalnymi nazwami skrótów, osobnymi katalogami i identyfikatorami instalacji. Trzeba z nich ponownie skompilować i przetestować EXE przed podmienieniem publicznych plików. Nie usuwać plików z katalogu poprzedniej instalacji bez kopii danych.
 
-**Poprawione paczki developerskie dla wcześniejszych wersji są zachowane.** v1.7 Enhanced jest oficjalnym wydaniem Windows, a v1.8 Mobile pozostaje w projektowaniu.
+**Poprawione paczki developerskie dla wcześniejszych wersji są zachowane.** v1.7 Enhanced jest oficjalnym wydaniem Windows, a v1.8 Mobile jest dostępny wyłącznie jako testowa Beta Android.
 
 ## 📁 Poprzednie wersje (EXE)
 
