@@ -1,9 +1,10 @@
 # BTBlocks — archiwum starszych wersji
 
-Aktualne wydanie: **[BTBlocks v1.5 Christmas Edition — Inspiron 620 Tribute](https://drive.google.com/file/d/1NIsA4JbjmLpiS4HRg8abveJIuGhEdyB_/view?usp=drivesdk)**.
+Aktualne wydanie: **[BTBlocks v1.7 Enhanced](https://drive.google.com/file/d/1PqT_FkYE3FVnFzqG_HW6cx5eEYW1gaWd/view?usp=drivesdk)**.
 
 | Wersja | Pobieranie | Opis |
 |---|---|---|
+| v1.5 Christmas — Inspiron 620 Tribute | [EXE](https://drive.google.com/file/d/1NIsA4JbjmLpiS4HRg8abveJIuGhEdyB_/view?usp=drivesdk) | Świąteczne gry, labirynt i pożegnalna misja Inspirona |
 | v1.4 Christmas + Kafelkowy Labirynt | [EXE](https://drive.google.com/file/d/1LEDSQbtDgdGUWsGZfwFnYnSY4MFmMmK-/view?usp=drivesdk) | Labirynt, Gift Catcher, świąteczne minigry |
 | v1.4 Christmas Original | [EXE](https://drive.google.com/file/d/1dfKcGXOCyDXvSMeBSUTDf5Ev3UmZKw1Y/view?usp=drivesdk) | Oryginalna edycja świąteczna bez labiryntu |
 | v1.3 | [EXE](https://drive.google.com/file/d/1UYH18dH5nfyBhhsiaHZjmY4161xGmSVP/view?usp=drivesdk) | Starsza wersja gry |
